@@ -1,0 +1,91 @@
+﻿l_english:
+ national_decisions:0 "National Policy"
+ 
+ cap:0 "Capitulation"
+
+ spain_defeat:0 "Early Surrender/Revival"
+ 
+ collapse:0 "Collapse"
+
+ division_azul:0 "Expanded División Azul - "Strict Neutrality""
+ division_azul_desc:0 "Even as Spain commits itself to a position of non-belligerence outside of the Axis, we still must provide further aid to their cause."
+ 
+ spain_war:0 "Honor the Hendaye Interview"
+ spain_war_desc:0 "The time has come to fufill the promise made at Hendaye and repay our allies for their past support of Spain."
+ 
+ spain_inv:0 "Instigate the Iberian Front"
+ spain_inv_desc:0 "While Madrid's position remains dubious, the time has come for us to force Spain's hand... (Can now justify on Spain)"
+ 
+ france_reborn:0 "France Reborn!"
+ france_reborn_desc:0 "France has lost the battle, but she has not lost the war..."
+
+ vichy_unify:0 "Reunification of France"
+  
+ braz:0 "Move our Capital to Brazzaville (Middle Congo)"
+ 
+ algiers:0 "Move our Capital to Algiers"
+  
+ paris:0 "Return to Paris"
+
+ victory_plan:0 "Victory Plan" 
+ victory_plan_desc:0 "The fall of England is a serious blow to the Allied war effort, but we must remain steadfeast in our commitment to Ultimate Victory!"
+ 
+ liberty:0 "Last Beacon of Liberty" 
+ liberty_desc:0 "With the fall of England, the United States now stands alone as the last Beacon of Liberty."
+ 
+ ships:0 "Take back the Waves!"
+ ships_desc:0 "Although our grand fleet has been reduced to a shell of its former self, we cannot abandon the vast seas to enemy control forever."
+
+ navy_defense:0 "Defensive Fleet Posture"
+ navy_defense_desc:0 "The Allied Navies are on the backfoot and we must take measures to ensure the security of our vital shipping lanes."
+
+ navy_offense:0 "Offensive Fleet Posture"
+ navy_offense_desc:0 "The Allied Navies are on the full offensive, aiming to decisively defeat the Axis navies."
+
+ ticino:0 "Seize Ticino"
+ 
+ ita_vic:0 "Seize Vichy Territories"
+ 
+ torch:0 "Operation Torch"
+ torch_desc:0 "The time has come to strike at the puppet Vichy regime."
+ 
+ compass:0 "Operation Compass"
+ compass_desc:0 "The time has come force Italy's hand and move first to strike down their holdings in Africa."
+ 
+ jap_sov:0 "Strike the Soviet Union"
+ jap_sov_desc:0 "The time has come to put an end to the Communist threat to our north and seize the Far East."
+ 
+ bagration:0 "Operation Bagration"
+ bagration_desc:0 "The time has come to end the facade and finally crush the German menace."
+ 
+
+ mort_mio:0 "Invite Foreign Tank Designer"
+ mort_mio_desc:0 "Unlocks an level 2 tank MIO for use."
+
+ mort_organization:0 "Mortopian Heavy Industries"
+ 
+ rubber_emergency:0 "Emergency Rubber Stockpiles"
+ 
+ rubber_build:0 "Emergency Synthetic Rubber production"
+
+ rubber_crisis:0 "Rubber Crisis"
+ 
+ supply:0 "Logistical Preparations"
+ 
+ liby_supply:0 "Logistics in Libya"
+ 
+ eth_supply:0 "Logistics in Ethiopia"
+ 
+ sia_supply:0 "Logistics in Siam"
+ 
+ fra_cap:0 "Victory in France"
+ 
+ fra_hold:0 "Battle of France"
+ 
+ fra_worker:0 "Resolve the labor issue"
+ 
+ fra_special:0 "Diversify Special Forces"
+ 
+ fin_con:0 "Defense preparations"
+ 
+ auto:0 "Promote autonomy"

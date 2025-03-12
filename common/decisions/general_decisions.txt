@@ -1,0 +1,115 @@
+important_actions = {
+
+    political_focus = {
+    icon = generic_political_discourse
+    fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = GER
+		tag = JAP
+		tag = ENG
+		tag = ITA
+		}
+	}
+	visible = { NOT = { has_country_flag = picked } }
+	available = { NOT = { controls_state = 16 } }
+    complete_effect = {
+		add_ideas = political_focus
+		set_country_flag = picked
+        }
+    ai_will_do = { base = 0 }	    
+    } # political
+
+    construction_focus = {
+    icon = GFX_decision_gre_investment_decisions
+	fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = GER
+		tag = JAP
+		tag = ENG
+		tag = ITA
+			}
+		}
+	visible = { NOT = { has_country_flag = picked } }
+	available = { NOT = { controls_state = 16 } }
+	complete_effect = {
+		add_ideas = construction_focus
+		set_country_flag = picked
+		}
+    ai_will_do = {
+		base = 1
+		modifier = {
+			factor = 0
+			OR = {
+				tag = CHI
+				
+				tag = HOL
+				tag = BEL
+				tag = POL
+				
+				tag = AUS
+				tag = CZE
+				
+				tag = YUG
+				tag = ALB
+				tag = GRE
+				
+				#tag = EST
+				#tag = LAT
+				#tag = LIT
+				}
+			}
+		}
+
+    } # Construction
+
+    production_focus = {
+    icon = GFX_decision_generic_merge_plant_materiel
+    fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = GER
+		tag = JAP
+		tag = ENG
+		tag = ITA
+			}
+		}
+	visible = { NOT = { has_country_flag = picked } }
+	available = { NOT = { controls_state = 16 } }
+	complete_effect = { 
+		add_ideas = production_focus
+		set_country_flag = picked
+		}
+    ai_will_do = { base = 0 }
+	} # Production
+
+	peacetime = {
+	icon = generic_army_support
+	fire_only_once = no
+	allowed = { }
+	visible = {
+		has_war = no
+		NOT = { has_idea = peacetime
+				}
+			}
+	available = { 	
+			NOT = {
+				any_country = {
+				has_volunteers_amount_from = {
+   				tag = ROOT
+				count > 0
+							}
+					}
+				}
+			}
+	complete_effect = { add_ideas = peacetime }
+	} # PEACE
+	
+} #general dec

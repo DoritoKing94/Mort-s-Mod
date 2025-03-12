@@ -1,0 +1,532 @@
+important_actions = {
+
+	spain_defeat = {
+	icon = generic_ignite_civil_war
+	fire_only_once = yes
+	ai_will_do = { base = 0 }
+	allowed = { original_tag = SPR }
+	available = {
+		has_civil_war = yes
+		surrender_progress > 0.5
+		}
+	complete_effect = {
+		every_enemy_country = { add_ideas = collapse }
+		add_stability = -0.15
+		SOV = {
+			army_experience = 100
+			air_experience = 100
+			add_offsite_building = { type = industrial_complex level = 6 }
+			}
+		FRA = {
+			add_war_support = 0.05
+			add_stability = 0.15 
+			}
+		} # effect
+	} # spain
+
+	division_azul = {
+	cost = 50
+	icon = generic_prepare_civil_war
+	fire_only_once = yes
+	ai_will_do = { base = 1 }
+	allowed = {
+		original_tag = SPR
+		}
+    available = {
+		has_war = no
+		date < 1943.01.01
+		has_idea = SPA_la_division_azul
+		}
+	complete_effect = {
+		set_rule = { can_join_factions = no } 
+		swap_ideas = {
+    			remove_idea = SPA_la_division_azul
+    			add_idea = division_azul
+				}
+			}
+	} # azul
+
+	spain_war = {
+	cost = 50
+	icon = GFX_decision_cat_iberian_summit
+	fire_only_once = yes
+	allowed = { original_tag = SPR }
+    available = {
+		date < 1943.01.01
+		FRA = { has_capitulated = yes }
+		NOT = { has_idea = division_azul }
+		}
+	complete_effect = {
+		add_to_war = {
+    			targeted_alliance = GER
+    			enemy = ENG
+			}
+		GER = { add_to_faction = ROOT }
+		add_ideas = spain_war
+		add_state_core = 118
+		complete_national_focus = SPA_defenses_against_invasion
+
+			POR = {
+				every_unit_leader = {
+				set_nationality = ROOT
+					}
+				}
+			annex_country = { target = POR transfer_troops = yes }
+			every_state = {
+				limit = {
+					is_core_of = POR
+					}
+				add_core_of = ROOT
+			}
+			
+		#POR = {
+		#	give_resource_rights = {
+    	#		receiver = ROOT
+    	#		state = 112 }
+		#	give_resource_rights = {
+    	#		receiver = ROOT
+    	#		state = 181 }
+		#	give_resource_rights = {
+    	#		receiver = ROOT
+    	#		state = 795 }
+		#		} # Portugal
+		} # effects
+	} # spain war
+	
+  	france_reborn = {
+	icon = GFX_decision_generic_nationalism
+	fire_only_once = yes
+	ai_will_do = { base = 0 }
+	allowed = { tag = FRA }
+	available = { has_capitulated = yes }
+	
+	complete_effect = { #Ita-20, 20, 10 #Fra-30, 15, 15 #civ-mil-dock
+	add_ideas = france_reborn
+	every_controlled_state = { add_extra_state_shared_building_slots = 2 }
+	VIC = { every_owned_state = { add_extra_state_shared_building_slots = 2 } }
+	ITA = {
+		every_owned_state = { add_extra_state_shared_building_slots = 2 }
+		add_offsite_building = { type = industrial_complex level = 15 }
+		add_offsite_building = { type = arms_factory level = 20 }
+		}
+	
+	115 = {
+	add_resource = { type = steel amount = 20 }
+	add_resource = { type = oil amount = 20 }
+	} # Sicily
+
+	448 = {
+	add_extra_state_shared_building_slots = 20
+	add_building_construction = {
+  	type = industrial_complex
+   	level = 5
+   	instant_build = yes }
+	add_building_construction = {
+  	type = dockyard
+   	level = 10
+   	instant_build = yes }
+    } # Tripoli
+	
+	310 = {
+	add_extra_state_shared_building_slots = 40
+	add_building_construction = {
+  	type = industrial_complex
+   	level = 15
+   	instant_build = yes }
+	add_building_construction = {
+  	type = arms_factory
+   	level = 10
+   	instant_build = yes }
+	add_building_construction = {
+  	type = dockyard
+   	level = 10
+   	instant_build = yes }
+	} # French Guiana
+
+	772 = {
+	add_resource = { type = oil amount = 28 }
+	add_resource = { type = steel amount = 28 }
+	add_extra_state_shared_building_slots = 30
+	add_building_construction = {
+  	type = industrial_complex
+   	level = 15
+   	instant_build = yes }
+	add_building_construction = {
+  	type = arms_factory
+   	level = 5
+   	instant_build = yes }
+	add_building_construction = {
+  	type = dockyard
+   	level = 5
+   	instant_build = yes }
+	} # Middle Congo
+	
+	if = {
+		limit = { VIC = { exists = yes } }
+			country_event = { id = lar_appeal_to_overseas_territories.7 days = 1 }
+		}
+	
+	hidden_effect = {
+		115 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = fuel_silo
+				level = 3
+				instant_build = yes }
+			} # Sicily
+		772 = {
+			add_compliance = 40
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = fuel_silo
+				level = 3
+				instant_build = yes }
+			add_building_construction = {
+				type = supply_node
+				level = 1
+				instant_build = yes
+				province = 8193 
+							}
+				} # Middle Congo
+				
+		310 = {
+			add_compliance = 40
+			}
+				
+		set_victory_points = {
+			province = 8193
+			value = 20
+				}
+			} #hidden
+			
+		} # effects
+	} # France
+	
+	vichy_unify = {
+	icon = generic_decision
+	fire_only_once = yes
+	ai_will_do = { factor = 1 }
+	allowed = { tag = FRA }
+	visible = { country_exists = VIC }
+	available = {
+		VIC = { has_capitulated = yes }
+		is_in_faction_with = VIC
+		}
+	complete_effect = {
+		random_other_country = { 
+			limit = { tag = VIC }
+			country_event = lar_france_vichy_reunification.1
+					}
+			} # effect
+	} # vichy
+
+	cap = {
+	icon = generic_civil_support
+	fire_only_once = yes
+	ai_will_do = { base = 1 }
+	allowed = {
+		NOT = {
+		tag = SOV
+		tag = GER
+		tag = JAP
+		tag = FRA
+			}
+		}
+	visible = { has_war = yes }
+	available = {
+		has_capitulated = yes 
+		is_ai = no
+		}
+	complete_effect = {
+		add_offsite_building = { type = arms_factory level = 10 }
+		add_offsite_building = { type = industrial_complex level = 10 }
+		add_offsite_building = { type = dockyard level = 5 }
+		} # effect
+	days_remove = 2190
+	modifier = {
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		weekly_manpower = 300
+				}
+	remove_trigger = { has_capitulated = no }
+	remove_effect = {
+		add_offsite_building = { type = arms_factory level = -10 }
+		add_offsite_building = { type = industrial_complex level = -10 }
+		add_offsite_building = { type = dockyard level = -5 }
+		}
+	} # cap
+
+	victory_plan = {
+	icon = GFX_decision_eng_imperial_federation
+	fire_only_once = yes
+	ai_will_do = { base = 1 }
+	allowed = { tag = ENG }
+	available = { 
+		OR = {
+			ENG = { has_capitulated = yes }
+			USA = { has_capitulated = yes }
+				}
+			}
+	complete_effect = {
+		add_offsite_building = { type = arms_factory level = 10 }
+		add_offsite_building = { type = industrial_complex level = 10 }
+		add_offsite_building = { type = dockyard level = 10 }
+		every_country = {
+		limit = {
+			AND = {
+				is_in_faction_with = ENG 
+				NOT = { tag = USA } 
+					} 
+				}
+			add_ideas = victory_plan
+				}
+		USA = { add_ideas = liberty }
+		SOV = {
+			add_timed_idea = { 
+				idea = sov_alone
+				days = 365
+					}
+				}
+			} # effects
+	} # victory plan
+
+	ships = {
+	icon = generic_naval
+	fire_only_once = yes
+	cost = 100
+	allowed = {
+		OR = {
+		tag = JAP
+		tag = USA
+		tag = ENG
+		tag = ITA
+			}
+		}
+	
+    available = {
+		
+		if = {
+			limit = {
+				tag = USA
+					}
+					NOT = { has_completed_focus = USA_reestablish_the_gold_standard }
+				}
+		has_war = yes
+		OR = {
+			has_navy_size = { size < 61 }
+			AND = {
+				has_navy_size = {
+					size < 5
+					type = capital_ship }
+				has_navy_size = { size < 91 }
+				}
+			} # or
+		}
+	complete_effect = {
+		add_war_support = -0.15
+		add_timed_idea = {
+    			idea = ships
+   			days = 180
+				}
+			}
+	} # ships
+
+	mort_mio = {
+	cost = 100
+	icon = generic_tank
+	fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = GER
+		tag = JAP
+		tag = ENG
+		tag = ITA
+		tag = FRA
+			}
+		}
+    available = { }
+	complete_effect = {
+		mio:mort_organization = { add_mio_size = 2 }
+		set_country_flag = mort_mio
+			}
+	} # mio
+
+	ticino = {
+	cost = 50
+	icon = generic_nationalism
+	fire_only_once = yes
+	allowed = { original_tag = ITA }
+    available = { 
+		OR = { 
+			controls_state = 907
+			controls_state = 118 
+			}
+		} # Cairo or Suez
+	complete_effect = { 846 = { transfer_state_to = ITA } }
+	} # tic
+	
+	ita_vic = {
+	cost = 50
+	icon = generic_nationalism
+	fire_only_once = yes
+	allowed = { tag = ITA }
+	visible = { country_exists = VIC }
+	available = {
+		OR = {
+			has_completed_focus = ITA_towards_a_greater_italy
+			has_completed_focus = ITA_italian_irredentism
+			}
+		VIC = {
+		controls_state = 735
+		controls_state = 1
+		controls_state = 458
+		controls_state = 665
+			}
+		}
+	complete_effect = {
+		735 = { transfer_state_to = ITA }
+		1 = { transfer_state_to = ITA }
+		458 = { transfer_state_to = ITA }
+		665 = { transfer_state_to = ITA }
+		}
+	} # Seize vichy land
+
+    rubber_emergency = {
+    icon = rubber
+	cost = 100
+	ai_will_do = { base = 1 }
+	fire_only_once = yes
+	allowed = { tag = USA }
+	available = {
+		is_in_faction = yes
+		NOT = {
+			has_idea = rubber_crisis
+			any_allied_country = { controls_state = 336 }
+			any_allied_country = { controls_state = 335 }
+			}
+		OR = {
+			rubber < -80
+			NOT = { any_allied_country = { controls_state = 334 } }
+			NOT = { any_allied_country = { controls_state = 672 } }
+			NOT = { any_allied_country = { controls_state = 333 } }
+			} #or
+		} # ava
+    complete_effect = {
+		add_ideas = rubber_crisis
+		add_resource = {
+			type = rubber
+			amount = 40
+			state = 361
+						}
+					} #effects       
+    modifier = { 
+		consumer_goods_factor = 0.4
+		civilian_factory_use = 15
+			}
+    days_remove = 90
+    	remove_effect = {
+			add_resource = {
+				type = rubber
+				amount = -32
+				state = 386
+							}
+						} # remove
+    	ai_will_do = { base = 0 }
+    } # Emergency US rubber
+	
+    rubber_build = {
+    icon = rubber
+	cost = 100
+	fire_only_once = yes
+	allowed = { tag = USA }
+	available = {
+		is_in_faction = yes
+		NOT = {
+			has_idea = rubber_crisis
+			any_allied_country = { controls_state = 336 }
+			any_allied_country = { controls_state = 335 }
+			}
+		OR = {
+			rubber < -80
+			NOT = { any_allied_country = { controls_state = 334 } }
+			NOT = { any_allied_country = { controls_state = 672 } }
+			NOT = { any_allied_country = { controls_state = 333 } }
+			} #or
+		} # ava
+    complete_effect = {
+		add_ideas = rubber_crisis
+		modify_building_resources = {
+		building = synthetic_refinery
+		resource = rubber
+		amount = 1
+					}
+			} # effect
+    modifier = { 
+		consumer_goods_factor = 0.5
+		civilian_factory_use = 15
+		}
+    days_remove = 160
+    	remove_effect = { }
+    } # Artificial Rubber
+	
+	fra_worker = {
+	cost = 100
+	ai_will_do = { base = 1 }
+	icon = generic_civil_support
+	fire_only_once = yes
+	allowed = { tag = FRA }
+	visible = { NOT = { has_completed_focus = FRA_encourage_immigration } }
+	available = { has_capitulated = yes }
+	days_remove = 70
+	remove_effect = { complete_national_focus = FRA_encourage_immigration }
+	} #
+	
+	fra_special = {
+	cost = 50
+	ai_will_do = { base = 0 }
+	icon = generic_army_support
+	fire_only_once = yes
+	allowed = { tag = FRA }
+	visible = { NOT = { has_completed_focus = FRA_special_forces } }
+	available = { has_capitulated = yes }
+	days_remove = 70
+	remove_effect = { complete_national_focus = FRA_special_forces }
+	} #
+	
+	fin_con = {
+	cost = 150
+	icon = eng_blackshirt_march
+	ai_will_do = { base = 1 }
+	fire_only_once = yes
+	allowed = { tag = FIN }
+	available = { SOV = { has_completed_focus = SOV_claims_in_baltic } }
+    complete_effect = {
+		add_ideas = extensive_conscription
+		}
+	} #	Fin conscription
+	
+	auto = {
+	cost = 100
+	icon = CHL_grant_full_rights_to_the_mapuche
+	ai_will_do = { base = 0 }
+	fire_only_once = yes
+	allowed = {
+		OR = {
+			tag = MAN
+			tag = NOR
+			}
+		}
+	available = { }
+    complete_effect = {
+		add_autonomy_score = {
+			value = 3000
+			localization = auto
+			}
+		}
+	
+	} #	auto
+	
+
+} # Nat Decisions

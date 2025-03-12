@@ -1,0 +1,179 @@
+ideas = {
+	country = {
+
+	officer_training_corps = {
+		picture = eng_imperial_conscription
+		allowed = { }
+		modifier = {
+			command_power_gain_mult = 0.25
+            max_command_power = 50
+         		}
+		} # Officer
+
+		doctrine = {
+			picture = chi_wargaming_division
+			allowed = { }
+			cancel = { }
+			modifier = { 
+				army_org_factor = -0.05
+				experience_gain_army_factor = -0.5
+				experience_gain_air_factor = -0.2
+				experience_gain_navy_factor = -0.2
+				}
+			}
+	
+		airland = {
+			picture = ETH_conservative_high_command
+			allowed = { }
+			cancel = { }
+			modifier = {
+			army_bonus_air_superiority_factor = 0.3
+			air_cas_present_factor = 0.3
+			enemy_army_bonus_air_superiority_factor = 0.5
+			extra_paratrooper_supply_grace = 168
+				}
+			}
+
+		airshield = {
+			picture = SWE_let_fly_all_guns
+			allowed = { }
+			cancel = {}
+			modifier = {
+			enemy_army_bonus_air_superiority_factor = -0.4
+			air_cas_present_factor = -0.5
+				}
+			}
+
+		mass = {
+			picture = tur_coordinated_balkan_armed_forces
+			allowed = { }
+			cancel = { }
+			modifier = {
+			army_infantry_attack_factor = -0.05
+			army_infantry_defence_factor = -0.05
+			special_forces_attack_factor = 0.1
+			special_forces_defence_factor = 0.1
+			# attrition = 0.1
+			special_forces_training_time_factor = -0.25
+			special_forces_cap = 0.5
+				}
+			}
+
+		best = {
+			picture = tur_golden_age_of_the_wolf
+			allowed = { }
+			cancel = { }
+			modifier = {
+			conscription_factor = -0.4
+			special_forces_training_time_factor = 0.2
+			special_forces_attack_factor = 0.2
+			special_forces_defence_factor = 0.1
+			special_forces_no_supply_grace = 120
+			special_forces_out_of_supply_factor = -0.2
+				}
+			}
+
+		relentless_offensive = {
+			picture = hol_liberation
+			allowed = { }
+			cancel = {}
+			modifier = {
+			army_attack_factor = 0.15
+			army_attack_speed_factor = 0.15
+			army_defence_factor = -0.05
+			planning_speed = 0.35
+			attrition = 0.15
+			max_planning_factor = -0.2
+			max_dig_in_factor = -0.2
+			army_strength_factor = -0.15
+				}
+			}
+
+		methodical_battle = {
+			picture = generic_supply_depot
+			allowed = { }
+			cancel = {}
+			modifier = {
+			army_attack_factor = -0.05
+			army_defence_factor = -0.05
+			max_dig_in_factor = 0.2
+			max_planning_factor = 0.2
+			planning_speed = -0.2
+			dig_in_speed_factor = -0.2
+			army_fuel_capacity_factor = 0.3
+			no_supply_grace = 96
+				}
+			}
+
+		depth = {
+			picture = ETH_peacekeeping_forces
+			allowed = { }
+			cancel = { }
+			modifier = {
+			dig_in_speed_factor = 0.4
+			max_dig_in_factor = -0.3
+			army_morale_factor = 0.2
+			pocket_penalty = -0.5
+			org_loss_at_low_org_factor = -0.1
+			land_reinforce_rate = 0.02
+				}
+			}
+
+		honor = {
+			picture = SWI_spirit_of_helvetia_aggressive_peace
+			allowed = { }
+			cancel = { }
+			modifier = {
+			experience_loss_factor = -0.2
+			army_strength_factor = 0.25
+			army_attack_speed_factor = -0.15
+			army_attack_factor = -0.05
+			grant_medal_cost_factor = -0.8
+				}
+			}
+
+		siege = {
+			picture = ast_all_in
+			allowed = { }
+			cancel = { }
+			modifier = {
+			railway_gun_bombardment_factor = 0.1
+			shore_bombardment_bonus = 0.2
+			river_crossing_factor = -0.2
+			naval_invasion_penalty = -0.2
+			supply_consumption_factor = 0.1
+				}
+			}
+			
+		adapt = {
+			picture = generic_mountain_warfare
+			allowed = { }
+			cancel = { }
+			modifier = {
+			#land_night_attack = 0.05
+			max_planning_factor = -0.05
+			planning_speed = -0.1
+			org_loss_when_moving = -0.1
+			army_fuel_consumption_factor = -0.1
+			supply_consumption_factor = -0.1
+				}
+			}
+
+		enigma = {
+			picture = FIN_maan_turva
+			allowed = { }
+			cancel = { }
+			modifier = {
+			agency_upgrade_time = -0.25
+			intelligence_agency_defense = 2
+			decryption_power = 35
+			crypto_strength  = 4
+			intel_network_gain_factor = 0.1
+			max_command_power = -40
+			command_power_gain_mult = -0.2
+				}
+			}
+
+
+	} # country
+}

@@ -1,0 +1,8 @@
+supply = {
+	icon = GFX_modifiers_generic_railways
+	
+	enable = { always = yes }
+	
+	local_supplies_for_controller = 4
+	
+}

@@ -1,0 +1,7 @@
+national_decisions = {
+     icon = GFX_decision_category_SWI_federal_council
+	priority = 7
+     allowed = {
+		has_dlc = "Waking the Tiger"
+		}
+}

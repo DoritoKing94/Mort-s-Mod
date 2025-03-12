@@ -1,0 +1,592 @@
+intel_sharing = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = CAN
+						tag = USA
+						tag = MEX
+						tag = BRA
+						tag = ENG
+						tag = FRA
+						tag = SAF
+						tag = RAJ
+						tag = AST
+						tag = NZL
+						tag = SOV
+						tag = HOL
+						tag = BEL
+						tag = COG
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					add_operation_token = {
+						tag = ENG
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = ENG
+						token = team_army
+					}
+					add_operation_token = {
+						tag = ENG
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = ENG
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = USA
+						}
+					}
+					add_operation_token = {
+						tag = USA
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = USA
+						token = team_army
+					}
+					add_operation_token = {
+						tag = USA
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = USA
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = FRA
+						}
+					}
+					add_operation_token = {
+						tag = FRA
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = FRA
+						token = team_army
+					}
+					add_operation_token = {
+						tag = FRA
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = FRA
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = SOV
+						}
+					}
+					add_operation_token = {
+						tag = SOV
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = SOV
+						token = team_army
+					}
+					add_operation_token = {
+						tag = SOV
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = SOV
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = CAN
+						}
+					}
+					add_operation_token = {
+						tag = CAN
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = CAN
+						token = team_army
+					}
+					add_operation_token = {
+						tag = CAN
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = CAN
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = MEX
+						}
+					}
+					add_operation_token = {
+						tag = MEX
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = MEX
+						token = team_army
+					}
+					add_operation_token = {
+						tag = MEX
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = MEX
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = BRA
+						}
+					}
+					add_operation_token = {
+						tag = BRA
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = BRA
+						token = team_army
+					}
+					add_operation_token = {
+						tag = BRA
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = BRA
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = SAF
+						}
+					}
+					add_operation_token = {
+						tag = SAF
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = SAF
+						token = team_army
+					}
+					add_operation_token = {
+						tag = SAF
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = SAF
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = RAJ
+						}
+					}
+					add_operation_token = {
+						tag = RAJ
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = RAJ
+						token = team_army
+					}
+					add_operation_token = {
+						tag = RAJ
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = RAJ
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = AST
+						}
+					}
+					add_operation_token = {
+						tag = AST
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = AST
+						token = team_army
+					}
+					add_operation_token = {
+						tag = AST
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = AST
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = NZL
+						}
+					}
+					add_operation_token = {
+						tag = NZL
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = NZL
+						token = team_army
+					}
+					add_operation_token = {
+						tag = NZL
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = NZL
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = HOL
+						}
+					}
+					add_operation_token = {
+						tag = HOL
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = HOL
+						token = team_army
+					}
+					add_operation_token = {
+						tag = HOL
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = HOL
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = BEL
+						}
+					}
+					add_operation_token = {
+						tag = BEL
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = BEL
+						token = team_army
+					}
+					add_operation_token = {
+						tag = BEL
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = BEL
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = COG
+						}
+					}
+					add_operation_token = {
+						tag = COG
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = COG
+						token = team_army
+					}
+					add_operation_token = {
+						tag = COG
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = COG
+						token = team_airforce
+					}
+				}
+			} # allied intel sharing
+			
+			every_country = {
+				limit = {
+					OR = {
+						tag = GER
+						tag = ITA
+						tag = JAP
+						tag = BUL
+						tag = HUN
+						tag = ROM
+						tag = FIN
+						tag = MAN
+						tag = SIA
+						tag = SPR
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = GER
+						}
+					}
+					add_operation_token = {
+						tag = GER
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = GER
+						token = team_army
+					}
+					add_operation_token = {
+						tag = GER
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = GER
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = ITA
+						}
+					}
+					add_operation_token = {
+						tag = ITA
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = ITA
+						token = team_army
+					}
+					add_operation_token = {
+						tag = ITA
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = ITA
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = BUL
+						}
+					}
+					add_operation_token = {
+						tag = BUL
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = BUL
+						token = team_army
+					}
+					add_operation_token = {
+						tag = BUL
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = BUL
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = ROM
+						}
+					}
+					add_operation_token = {
+						tag = ROM
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = ROM
+						token = team_army
+					}
+					add_operation_token = {
+						tag = ROM
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = ROM
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = HUN
+						}
+					}
+					add_operation_token = {
+						tag = HUN
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = HUN
+						token = team_army
+					}
+					add_operation_token = {
+						tag = HUN
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = HUN
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = SIA
+						}
+					}
+					add_operation_token = {
+						tag = SIA
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = SIA
+						token = team_army
+					}
+					add_operation_token = {
+						tag = SIA
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = SIA
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = JAP
+						}
+					}
+					add_operation_token = {
+						tag = JAP
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = JAP
+						token = team_army
+					}
+					add_operation_token = {
+						tag = JAP
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = JAP
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = MAN
+						}
+					}
+					add_operation_token = {
+						tag = MAN
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = MAN
+						token = team_army
+					}
+					add_operation_token = {
+						tag = MAN
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = MAN
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = SPR
+						}
+					}
+					add_operation_token = {
+						tag = SPR
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = SPR
+						token = team_army
+					}
+					add_operation_token = {
+						tag = SPR
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = SPR
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = FIN
+						}
+					}
+					add_operation_token = {
+						tag = FIN
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = FIN
+						token = team_army
+					}
+					add_operation_token = {
+						tag = FIN
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = FIN
+						token = team_airforce
+					}
+				}
+			} # Axis intel sharing
+			
+	} # intel sharing

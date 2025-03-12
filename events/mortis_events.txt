@@ -1,0 +1,99 @@
+##########################
+# Events
+##########################
+add_namespace = mortis
+
+news_event = { #endsieg
+	id = mortis.1
+	title = mortis.1.t
+	desc = mortis.1.d
+	picture = GFX_news_event_german_reichstag_ruins_01
+	is_triggered_only = yes
+	major = yes	
+	
+	option = {
+		name = mortis.1.a	
+	}
+
+}
+
+news_event = { #bulge
+	id = mortis.2
+	title = mortis.2.t
+	desc = mortis.2.d
+	picture = GFX_news_event_ardennes_offensive
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mortis.2.a
+		trigger = {
+			NOT = { is_in_faction_with = GER }
+			NOT = { is_in_faction_with = USA }		
+			}
+		}
+	option = {
+		name = mortis.2.b
+		trigger = {
+			is_in_faction_with = USA
+			}
+		}
+	option = {
+		name = mortis.2.c
+		trigger = {
+			is_in_faction_with = GER
+			}		
+		}		
+}
+
+news_event = { #Spring 
+	id = mortis.3
+	title = mortis.3.t
+	desc = mortis.3.d
+	picture = GFX_news_event_generic_panzer_attack
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = mortis.3.a
+	}
+}
+
+news_event = { #Stalin
+	id = mortis.6
+	title = mortis.6.t
+	desc = mortis.6.d
+	picture = GFX_news_event_SOV_supreme_soviet_bukharin
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = mortis.6.a
+	}
+}
+
+news_event = { #Japan invade Sov
+	id = mortis.7
+	title = mortis.7.t
+	desc = mortis.7.d
+	picture = GFX_news_event_japanese_parade
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = mortis.7.a
+	}
+}
+
+news_event = { #Oper Compass
+	id = mortis.8
+	title = mortis.8.t
+	desc = mortis.8.d
+	picture = GFX_news_event_canadian_tank
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = mortis.8.a
+	}
+}

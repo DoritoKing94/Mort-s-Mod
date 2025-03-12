@@ -1,0 +1,120 @@
+﻿l_english:
+ USA_reestablish_the_gold_standard:1 "Safeguard American Principles"
+ USA_reestablish_the_gold_standard_desc:1 "While grounded in good intentions, the New Deal's gross overreach and failures can no longer be ignored. We must abandon this irresponsible path and restore sound governance in America."
+ USA_adjusted_compensation_act:1 "Income Tax Reform"
+ USA_adjusted_compensation_act_desc:1 "The Income Tax takes money out of every American's wallet - money that our citizens could spend more wisely on buying other things and supporting their local economy. We will give Americans the autonomy over their own finances back."
+ USA_labour_management_relations_act:1 "Adjusted Compensation Act"
+ USA_labour_management_relations_act_desc:1 "Our veterans of the Great War were promised a fair pension, and we should now honor those promises. Many have fallen on hard times recently as the depression hit. We must do what we can to help those who answered the call of the Republic in its hour of need."
+ USA_protectionist_tariffs:1 "Protectionist Tariffs"
+ USA_protectionist_tariffs_desc:1 "Free Trade has opened up our markets to foreign competitors, many of which have raised tariffs and duties of their own. Our companies face stiff competition while theirs enjoy the safety of the customs-wall. This must end."
+ USA_income_tax_reform:2 "Balance the Budget"
+ USA_income_tax_reform_desc:1 "After a great struggle we have now finally been able to end the New Deal era of fiscally irresponsible deficit spending and return to a reasonable government budget."
+ USA_institute_of_american_sciences:1 "American Institute of Sciences"
+ USA_institute_of_american_sciences_desc:1 "We will create a new organization to coordinate the efforts of our world-class scientists."
+ 
+ USA_america_first:0 "American Isolationism"
+ USA_america_first_desc:2 "Some people would have us spend our treasures and the blood of our youth in foreign wars once again, but we must not be swayed by these agitators."
+ USA_extend_the_chinese_exclusion_acts:1 "The American Dream"
+ USA_extend_the_chinese_exclusion_acts_desc:2 ""
+ USA_empower_the_huac:1 "America First Commitee"
+ USA_empower_the_huac_desc:1 ""
+ 
+ USA_voter_registration_act:1 "Voter Registration Act"
+ USA_voter_registration_act_desc:1 ""
+ 
+ USA_ally_with_the_silver_shirts:1 "The America Economy"
+ USA_ally_with_the_silver_shirts_desc:1 ""
+ USA_national_prosperity_program:1 "Economic Recovery"
+ USA_national_prosperity_program_desc:1 ""
+ USA_privatize_the_TVA:1 "Continued Economic Growth"
+ USA_privatize_the_TVA_desc:1 ""
+ USA_de_regulate_the_banking_sector:1 "Peace Through Strength"
+ USA_de_regulate_the_banking_sector_desc:1 ""
+ USA_national_employment_strategy:1 "Develop Synthetic Rubber"
+ USA_national_employment_strategy_desc:1 ""
+ USA_invite_foreign_support:1 "Defense R&D"
+ USA_invite_foreign_support_desc:1 ""
+ USA_send_lindbergh_to_germany:1 "American Science"
+ USA_send_lindbergh_to_germany_desc:1 ""
+ USA_work_with_the_bund:1 "American Military-Industrial Complex"
+ USA_work_with_the_bund_desc:1 ""
+ USA_work_with_the_bund_tt:0 ""
+ 
+ USA_recruit_the_free_corps:1 "Recruit the Free Corps"
+ USA_recruit_the_free_corps_desc:1 ""
+ USA_honor_the_confederacy:1 "Honor the Confederacy"
+ USA_honor_the_confederacy_desc:1 ""
+ 
+ USA_war_powers_act:1 "A Date Which Will Live in Infamy"
+ USA_war_powers_act_desc:1 "Yesterday, December 7, 1941—a date which will live in infamy—the United States of America was suddenly and deliberately attacked by naval and air forces of the Empire of Japan. No matter how long it may take us to overcome this premeditated invasion, the American people in their righteous might will win through to absolute victory."
+ USA_seize_cuba:1 "Emergency Lend-Lease"
+ USA_seize_cuba_desc:1 ""
+ USA_eliminate_the_southern_threat:1 "EST"
+ USA_eliminate_the_southern_threat_desc:1 ""
+ USA_manifest_destiny:1 "Supreme Allied High Command"
+ USA_manifest_destiny_desc:1 ""
+ USA_the_canadian_corridor:1 "Real Wonder Weapons"
+ USA_the_canadian_corridor_desc:1 ""
+ USA_north_american_dominion:1 "American Enginuity"
+ USA_north_american_dominion_desc:1 ""
+ USA_strategic_interests:1 "Coordinate Allied Research Efforts"
+ USA_strategic_interests_desc:1 ""
+ USA_protect_south_america:1 "American Generosity"
+ USA_protect_south_america_desc:1 ""
+ USA_pacific_pacification:1 "American Innovation"
+ USA_pacific_pacification_desc:1 ""
+ USA_secure_asia:1 "The Sole Superpower"
+ USA_secure_asia_desc:1 ""
+ USA_global_hegemony:1 "Never On The Backfoot!"
+ USA_global_hegemony_desc:1 ""
+ 
+ nuclear_usa:0 "American Atomics"
+ nuclear_usa_desc:0 "It is an atomic bomb. It is a harnessing of the basic power of the universe. The force from which the sun draws its power has been loosed against the enemies of the United States. We are now prepared to obliterate more rapidly and completely every productive enterprise our enemies have above ground in any city. We have spent two billion dollars on the greatest scientific gamble in history—and won."
+ 
+ isolationism:0 "American Isolationism"
+ isolationism_desc:0 ""
+ 
+ us_vol:0 "Private Volunteers"
+ us_vol_desc:0 ""
+ 
+ balanced_budget:0 "Balanced Budget"
+ balanced_budget_desc:0 ""
+ 
+ american_dream:0 "The American Dream"
+ american_dream_desc:0 ""
+ 
+ american_industry:0 "American Industry"
+ american_industry_desc:0 ""
+ 
+ american_war:0 "American Military-Industrial Complex"
+ american_war_desc:0 ""
+ 
+ us_recovery:0 "Economic Recovery"
+ us_recovery_desc:0 ""
+ 
+ econ_growth:0 "American Prosperity"
+ econ_growth_desc:0 ""
+ 
+ us_strength:0 "Peace Through Strength"
+ us_strength_desc:0 ""
+ 
+ american_generosity:0 "American Generosity"
+ american_generosity_desc:0 ""
+ 
+ american_science:0 "American Science"
+ american_science_desc:0 ""
+ 
+ american_ingenuity:0 "American Ingenuity"
+ american_ingenuity_desc:0 ""
+ 
+ american_innovation:0 "American Innovation"
+ american_innovation_desc:0 ""
+ 
+ usa_backfoot:0 "Never on the Backfoot!"
+ usa_backfoot_desc:0 ""
+ 
+ safeguard:0 "Safeguard American Principles"
+ cic:0 "Commander in Chief"
+ usa_crisis:0 "The War Mandate"
+ 
+ pax_americana:0 "Pax Americana"

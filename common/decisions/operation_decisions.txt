@@ -1,0 +1,631 @@
+military_operations = {
+
+	endsieg = {
+	icon = ger_reichskommissariats
+	fire_only_once = yes
+	ai_will_do = { base = 1 }
+	allowed = { tag = GER }
+    available = { surrender_progress > 0.1 }
+	complete_effect = {
+		hidden_effect = {
+			news_event = { id = mortis.1 hours = 6 }
+			division_template = {
+				name = "Volkssturm"
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 0 y = 3 }
+					militia = { x = 0 y = 4 }
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+					militia = { x = 1 y = 2 }
+					militia = { x = 1 y = 3 }
+					militia = { x = 1 y = 4 }
+							}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					anti_air = { x = 0 y = 2 }
+					military_police = { x = 0 y = 3 }
+					anti_tank = { x = 0 y = 4 }
+					}
+				}
+			} # hidden
+		 	every_core_state = {
+				limit = { is_controlled_by = GER }
+						create_unit = {
+							division = "division_template = \"Volkssturm\" start_experience_factor = 0.05 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_1 = { owner = \"GER\" } artillery_equipment_1 = { owner = \"GER\" } } "
+							owner = GER
+						}
+						create_unit = {
+							division = "division_template = \"Volkssturm\" start_experience_factor = 0.05 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_1 = { owner = \"GER\" } artillery_equipment_1 = { owner = \"GER\" } } "
+							owner = GER
+						}
+						create_unit = {
+							division = "division_template = \"Volkssturm\" start_experience_factor = 0.1 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_1 = { owner = \"GER\" } artillery_equipment_1 = { owner = \"GER\" } } "
+							owner = GER
+						}
+					} #spawn ins
+		every_country = {
+		limit = { is_in_faction_with = GER }
+		add_timed_idea = {
+			idea = endsieg
+			days = 500
+					}
+				}
+		64 = { 
+		add_building_construction = {
+   		type = bunker
+		level = 8
+		province = {
+			id = 6521
+			id = 375
+			id = 3367
+			id = 11444
+			id = 3499
+			id = 11505
+			id = 9428
+			}
+		instant_build = yes
+				}
+		} # Berlin
+			} # effect
+	} # endsieg
+	
+	bulge = {
+	icon = ger_reichskommissariats
+	fire_only_once = yes
+	ai_will_do = { base = 1 }
+	allowed = { tag = GER }
+    available = {
+		has_war_with = USA
+		OR = {
+			BEL = { controls_state = 6 }
+			HOL = { controls_state = 7 }
+			}
+		FRA = { controls_state = 16 }
+		} # ava
+	complete_effect = {
+		hidden_effect = {
+			news_event = { id = mortis.2 hours = 6 }
+					}
+		every_country = {
+			limit = { is_in_faction_with = GER }
+			add_timed_idea = {
+				idea = bulge
+				days = 80
+					}
+				}
+			} # effect
+	} # bulge
+	
+	spring = {
+	icon = ger_reichskommissariats
+	fire_only_once = yes
+	ai_will_do = { base = 1 }
+	allowed = { tag = GER }
+    available = {
+		date > 1943.3.1
+		casualties_k > 500
+		NOT = { controls_state = 219 }
+		has_war_with = SOV
+		}
+	complete_effect = {
+		hidden_effect = {
+			news_event = { id = mortis.3 hours = 6 }
+					}
+		every_country = {
+		limit = { is_in_faction_with = GER }
+		add_timed_idea = {
+			idea = spring
+			days = 100
+					}
+				}
+			} # effect
+	} # spring
+	
+	sunset = {
+	icon = jap_pacific_guardian
+	fire_only_once = yes
+	ai_will_do = { base = 1 }
+	allowed = { tag = JAP }
+	available = {
+		surrender_progress > 0.1
+		}
+	complete_effect = {
+		every_country = {
+		limit = { is_in_faction_with = JAP }
+		add_timed_idea = {
+			idea = sunset
+			days = 500
+					}
+				}
+		282 = { 
+		add_building_construction = {
+   		type = bunker
+		level = 8
+		province = {
+			id = 1182
+			}
+		instant_build = yes
+				}
+		} # Tokyo
+			} # effect
+	} # sunset
+
+	sov_reserves = {
+	icon = oppression
+	fire_only_once = yes
+	ai_will_do = { base = 1 }
+	allowed = { tag = SOV }
+        available = {
+			surrender_progress > 0.55
+			casualties_k > 1000
+				}
+	complete_effect = {
+		hidden_effect = {
+			division_template = {
+				name = "Final Reserves"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 0 y = 4 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					infantry = { x = 1 y = 4 }
+							}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					anti_air = { x = 0 y = 2 }
+					anti_tank = { x = 0 y = 3 }
+					rangers_support = { x = 0 y = 4 }
+					}
+				}
+			}
+			
+			if = {
+				limit = { controls_state = 219 }
+					complete_national_focus = SOV_the_defense_of_moscow
+			}
+		
+			if = {
+				limit = { has_war_with = JAP }
+					every_state = {
+						limit = {	
+							AND = {
+								any_neighbor_state = { OR = { is_controlled_by = GER is_controlled_by = ROM is_controlled_by = HUN is_controlled_by = FIN is_controlled_by = ITA is_controlled_by = BUL is_controlled_by = SPR is_controlled_by = JAP is_controlled_by = MAN } }
+								is_controlled_by = SOV
+								}
+							}
+						create_unit = {
+							division = "division_template = \"Final Reserves\" start_experience_factor = 0.3 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } } "
+							owner = SOV
+						}
+						create_unit = {
+							division = "division_template = \"Final Reserves\" start_experience_factor = 0.3 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } } "
+							owner = SOV
+						}
+						create_unit = {
+							division = "division_template = \"Final Reserves\" start_experience_factor = 0.3 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } } "
+							owner = SOV
+						}
+					}
+				} #if
+				else = {
+					every_state = {
+						limit = {	
+							AND = {
+								any_neighbor_state = { OR = { is_controlled_by = GER is_controlled_by = ROM is_controlled_by = HUN is_controlled_by = FIN is_controlled_by = ITA is_controlled_by = BUL is_controlled_by = SPR is_controlled_by = SLO} }
+								is_controlled_by = SOV
+							}
+						}
+						create_unit = {
+							division = "division_template = \"Final Reserves\" start_experience_factor = 0.3 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } } "
+							owner = SOV
+						}
+						create_unit = {
+							division = "division_template = \"Final Reserves\" start_experience_factor = 0.3 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } } "
+							owner = SOV
+						}
+						create_unit = {
+							division = "division_template = \"Final Reserves\" start_experience_factor = 0.3 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } } "
+							owner = SOV
+						}
+					}
+				}
+				
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.25
+			uses = 8
+			name = "Final Reserves"
+			category = cat_mass_assault
+			}
+				
+		} # effects
+	} # sov reserve
+
+	tukha = {
+	icon = generic_ignite_civil_war
+	fire_only_once = yes
+	ai_will_do = { base = 1 }
+	allowed = { tag = SOV }
+	available = { surrender_progress > 0.75 }
+	complete_effect = {
+		hidden_effect = {
+			news_event = { id = mortis.6 hours = 6 }
+			set_cosmetic_tag = SOV_PROVISIONAL_neutrality
+			#set_cosmetic_tag = russian_empire
+			set_popularities = {
+				democratic = 18
+				neutrality = 31
+				fascism = 25
+				communism = 26
+				}
+			}
+		kill_country_leader = yes
+		set_politics = { ruling_party = neutrality }
+		every_country = {
+			limit = { is_in_faction_with = SOV }
+			add_timed_idea = {
+				idea = tukha
+				days = 500
+						}
+				}
+			}
+	} # tukha
+
+	sov_winter = {
+	icon = generic_operation
+	fire_only_once = yes
+	ai_will_do = { base = 0 }
+	allowed = { tag = SOV }
+	war_with_on_remove = FIN
+    available = {
+		FIN = { is_ai = no }
+		has_completed_focus = SOV_claims_in_baltic
+		}
+	days_remove = 70
+	remove_effect = {
+		complete_national_focus = SOV_secure_leningrad 
+		}
+	} # winter war
+
+	sov_evac = {
+	icon = generic_operation
+	fire_only_once = yes
+	ai_will_do = { base = 0 }
+	allowed = { tag = SOV }
+    available = {
+		has_war_with = GER
+				}
+	complete_effect = { complete_national_focus = SOV_move_industry_to_the_urals }
+	} # evac
+
+	braz = {
+	icon = GFX_decision_infiltrate_state
+	fire_only_once = no
+	ai_will_do = { base = 0 }
+	allowed = { tag = FRA }
+	available = { 
+		controls_state = 772 
+		has_capitulated = yes 
+		}
+	complete_effect = { set_capital = { state = 772 } }
+	} #Brazzaville/Middle Congo Capital
+
+	algiers = {
+	icon = GFX_decision_infiltrate_state
+	fire_only_once = no
+	ai_will_do = { base = 0 }
+	allowed = { tag = FRA }
+	available = { 
+		controls_state = 459 
+		has_capitulated = yes 
+		}
+	complete_effect = { set_capital = { state = 459 } }
+	} # algiers
+
+	paris = {
+	icon = GFX_decision_infiltrate_state
+	fire_only_once = no
+	ai_will_do = { base = 0 }
+	allowed = { tag = FRA }
+	available = { 
+		controls_state = 16
+		}
+	complete_effect = { set_capital = { state = 16 } }
+	} # Paris
+
+	navy_defense = {
+	icon = generic_naval
+	fire_only_once = no
+	days_re_enable = 365
+	cost = 50
+	allowed = { tag = ENG }
+    available = {
+		has_war = yes
+		NOT = {
+		has_idea = navy_offense
+			}
+		}
+	complete_effect = {
+		add_war_support = -0.15
+		every_country = {
+		limit = { is_in_faction_with = ENG }
+			add_timed_idea = {
+    			idea = navy_defense
+				days = 365
+					}
+				}
+			} # effects
+	} # navy def
+
+	navy_offense = {
+	icon = generic_naval
+	fire_only_once = no
+    days_re_enable = 365
+	allowed = { tag = ENG }
+	cost = 50
+        available = { 
+		has_war = yes
+		NOT = {
+		has_idea = navy_defense
+			}
+		}
+	complete_effect = {
+		add_war_support = 0.1
+		every_country = {
+		limit = { is_in_faction_with = ENG }
+			add_timed_idea = {
+    			idea = navy_offense
+				days = 365
+					}
+				}
+			} # effects
+	} # navy off
+	
+	torch = {
+	icon = GFX_decision_infiltrate_state
+	fire_only_once = yes
+	allowed = { tag = ENG }
+	visible = { country_exists = VIC }
+	available = {
+		date > 1941.01.01 
+		is_in_faction_with = USA
+		}
+	war_with_on_remove = VIC
+	cost = 50
+	days_remove = 35
+	remove_effect = {
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = VIC
+					}
+		VIC = {
+			add_to_war = {
+			targeted_alliance = GER
+			enemy = ENG
+				}
+			}
+		}
+	} # torch
+	
+	spain_inv = {
+	icon = GFX_decision_infiltrate_state
+	fire_only_once = yes
+	allowed = { tag = ENG }
+	available = {
+		NOT = { SPR = {  has_idea = division_azul } }
+		is_in_faction_with = USA
+		date > 1941.01.01
+		}
+	war_with_on_remove = SPR
+	cost = 50
+	days_remove = 10
+	remove_effect = {
+		SPR = { add_threat = 5 }
+			}
+	} # Spain war
+	
+	liby_supply = {
+	cost = 50
+	icon = GFX_decision_infiltrate_state
+	fire_only_once = yes
+	allowed = { tag = ITA }
+    available = { NOT = { has_war = yes } }
+	complete_effect = {
+		set_victory_points = {
+		province = 1130
+		value = 10 }
+		set_victory_points = {
+		province = 1149
+		value = 15 }
+		set_victory_points = {
+		province = 11954
+		value = 8 }
+			}
+	modifier = { civilian_factory_use = 10 }
+    days_remove = 60
+	remove_effect = {
+		450 = { add_dynamic_modifier = { modifier = supply } } # Benghasi
+		449 = { add_dynamic_modifier = { modifier = supply } } # El Agheila
+		448 = { add_dynamic_modifier = { modifier = supply } } # Tripoli
+		451 = { add_dynamic_modifier = { modifier = supply } } # Derna
+		663 = { add_dynamic_modifier = { modifier = supply } } # Cyren
+			}
+	} # ita supply
+
+	eth_supply = {
+	cost = 50
+	icon = GFX_decision_infiltrate_state
+	fire_only_once = yes
+	allowed = { tag = ITA }
+    	available = { NOT = { has_war = yes } }
+	complete_effect = {
+		set_victory_points = {
+		province = 5010
+		value = 20 } # Addis Ababa
+			}
+	modifier = { civilian_factory_use = 6 }
+    days_remove = 60
+	remove_effect = {
+		every_state = {
+			    limit = {
+					OR = {
+						is_core_of = ETH
+						is_owned_by = AOI
+						}
+					}
+					add_dynamic_modifier = { modifier = supply }
+				}
+			}
+	} # eth supply
+	
+	sia_supply = {
+	cost = 50
+	icon = GFX_decision_infiltrate_state
+	fire_only_once = yes
+	allowed = { tag = JAP }
+    available = { NOT = { has_war = yes } }
+	complete_effect = {
+		set_victory_points = {
+		province = 7408
+		value = 20 }
+		set_victory_points = {
+		province = 1488
+		value = 5 }
+		set_victory_points = {
+		province = 7236
+		value = 5 }
+			}
+	modifier = { civilian_factory_use = 6 }
+    days_remove = 60
+	remove_effect = {
+		every_state = {
+			limit = { is_core_of = SIA }
+				add_dynamic_modifier = { modifier = supply }
+					}
+			}
+	} # sia supply
+	
+	jap_sov = {
+	icon = GFX_decision_SOV_socialism_in_one_country
+	fire_only_once = yes
+	war_with_on_remove = SOV
+	days_remove = 70
+	allowed = { tag = JAP }
+	available = {
+		has_war_with = USA
+		MAL = { surrender_progress > 0.95 }
+		OR = { 
+			RAJ = { surrender_progress > 0.95 }
+			RAJ = { 
+				surrender_progress > 0.4
+				owns_state = 285
+				}
+			}
+		}
+	complete_effect = { hidden_effect = { news_event = { id = mortis.7 hours = 2 } } }
+	remove_effect = {
+		declare_war_on = {
+		target = SOV
+		type = annex_everything
+			}
+		}	
+	} #jap sov war
+	
+	compass = {
+	icon = GFX_decision_eng_puppet_usa
+	fire_only_once = yes
+	war_with_on_remove = ITA
+	days_remove = 10
+	allowed = { tag = ENG }
+	available = {
+		NOT = { has_war_with = ITA }
+		has_war_with = GER
+		date > 1941.01.01
+		}
+	complete_effect = { hidden_effect = { news_event = { id = mortis.8 hours = 2 } } }
+	remove_effect = {
+		ITA = {
+			add_to_war = {
+			targeted_alliance = GER
+			enemy = ENG
+				}
+			}
+		every_country = {
+			limit = { is_in_faction_with = ENG }
+				add_timed_idea = {
+					idea = compass
+					days = 120
+					}
+				}
+		} #eff
+	} #
+	
+	bagration = {
+	icon = GFX_decision_SOV_socialism_in_one_country
+	fire_only_once = yes
+	war_with_on_remove = GER
+	days_remove = 35
+	allowed = { tag = SOV }
+	available = {
+		has_war = no
+		OR = {
+			ENG = { surrender_progress > 0.1 }
+			date > 1943.01.01
+			}
+		}
+	complete_effect = {
+		JAP = {
+		diplomatic_relation = {
+			country = GER
+			relation = guarantee
+			active = no
+			}
+		}
+	}
+	remove_effect = {
+		hidden_effect = { }
+		SOV = {
+			declare_war_on = {
+				target = GER
+				type = annex_everything
+					}
+				}
+		complete_national_focus = SOV_anti_fascist_policies
+		every_country = {
+			limit = { is_in_faction_with = ROOT }
+				add_timed_idea = {
+					idea = bagration
+					days = 365
+					}
+				}
+		} #eff
+	} # force barb
+	
+	sov_chi = {
+	icon = jap_pacific_guardian
+	fire_only_once = yes
+	ai_will_do = { base = 0 }
+	days_remove = 70
+	cost = 70
+	allowed = { tag = SOV }
+	available = {
+		CHI = has_war_with = JAP
+		CHI = { surrender_progress > 0 }
+		}
+	remove_effect = {
+		complete_national_focus = SOV_the_threat_from_the_land_of_the_rising_sun
+		complete_national_focus = SOV_support_the_kuomintang
+		} #effect
+	} # chi vols
+
+} # Op Decisions
+

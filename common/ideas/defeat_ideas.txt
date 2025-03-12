@@ -1,0 +1,122 @@
+ideas = {
+	country = {
+	
+	collapse = {
+		picture = spr_crush_the_revolution
+		allowed = { }
+		cancel = { has_capitulated = yes }
+		modifier = { forced_surrender_limit = -1 }
+		}
+	
+	endsieg = {
+		picture = generic_fascism_rising
+		allowed = { }
+		cancel = { GER = { surrender_progress < 0.1 } }
+		modifier = {
+		minimum_training_level = -1
+		conscription_factor = 0.15
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		army_core_defence_factor = 0.1
+		army_core_attack_factor = 0.1
+		supply_combat_penalties_on_core_factor = -0.25
+			}
+		}
+		
+	tukha = {
+		picture = SOV_purged_junior_army_officers
+		allowed = { }
+		cancel = { SOV = { surrender_progress < 0.2 } }
+		modifier = {
+		war_support_factor = 0.05
+		minimum_training_level = -1
+		conscription_factor = 0.15
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		supply_combat_penalties_on_core_factor = -0.25
+			}
+		}
+
+	sunset = {
+		picture = jap_militarism_showa
+		allowed = { }
+		cancel = { JAP = { surrender_progress < 0.01 } }
+		modifier = {
+		minimum_training_level = -1
+		conscription_factor = 0.15
+		army_core_defence_factor = 0.15
+		army_core_attack_factor = 0.15
+		supply_combat_penalties_on_core_factor = -0.25
+			}
+		}
+		
+	bulge = {
+		picture = generic_fascism_rising
+		allowed = { }
+		cancel = { }
+		modifier = {
+			army_attack_factor = 0.15
+			army_defence_factor = 0.15
+			army_speed_factor = 0.15
+			cas_damage_reduction = 0.3
+			enemy_army_bonus_air_superiority_factor = -0.3
+			no_supply_grace = 96
+			}
+		targeted_modifier = {
+			tag = SOV
+			attack_bonus_against = -0.15
+			defense_bonus_against = -0.15
+						}
+		}
+		
+	spring = {
+		picture = generic_fascism_rising
+		allowed = { }
+		cancel = { }
+		modifier = {
+			army_speed_factor = 0.15
+			planning_speed = 0.2
+			army_morale_factor = 0.2
+			no_supply_grace = 96
+			}
+		targeted_modifier = {
+			tag = SOV
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+			}
+		}
+		
+	compass = {
+		picture = FIN_british_threat
+		allowed = { }
+		cancel = { }
+		modifier = {
+			planning_speed = 0.2
+			no_supply_grace = 96
+			}
+		targeted_modifier = {
+			tag = ITA
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+			}
+		}
+		
+	bagration = {
+		picture = SOV_soviet_hegemony
+		allowed = { }
+		cancel = { }
+		modifier = {
+			planning_speed = 0.2
+			army_morale_factor = 0.2
+			offensive_war_stability_factor = 0.2
+			war_support_factor = 0.2
+			}
+		targeted_modifier = {
+			tag = GER
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.05
+			}
+		}
+
+	} # country
+}

@@ -1,0 +1,418 @@
+army_decisions = {
+
+	airland = {
+	icon = generic_air
+	fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = JAP
+		tag = ENG
+		tag = ITA
+		tag = GER
+		}
+	}
+	available = {
+		FRA = { has_capitulated = yes }
+		NOT = {
+			has_idea = doctrine
+			}
+		has_army_experience > 75
+		has_air_experience > 200
+		command_power > 50
+		}
+	complete_effect = {
+		army_experience = -75
+		air_experience = -200
+		add_command_power = -50
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_timed_idea = { 
+			idea = doctrine
+			days = 120
+			}
+		} # complete
+	days_remove = 120
+	remove_effect = {
+	add_ideas = airland
+		}
+	} # airland
+
+	airshield = {
+	icon = GFX_decision_eng_puppet_usa
+	fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = JAP
+		tag = ENG
+		tag = ITA
+		tag = GER
+		}
+	}
+    available = {
+		FRA = { has_capitulated = yes }
+		NOT = {
+			has_idea = doctrine
+			}
+		has_army_experience > 150
+		has_air_experience > 100
+		command_power > 50
+		}
+	complete_effect = {
+		army_experience = -150
+		air_experience = -100
+		add_command_power = -50
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_timed_idea = { 
+			idea = doctrine
+			days = 120
+			}
+		random_army_leader = {
+			limit = { is_leading_army = yes }
+				add_unit_leader_trait = camouflage_expert
+			}
+		} # complete
+	days_remove = 120
+	remove_effect = { add_ideas = airshield }
+	
+	} # airshield
+
+	mass = {
+	icon = GFX_decision_eng_blackshirt_march
+	fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = JAP
+		tag = ENG
+		tag = ITA
+		tag = GER
+		}
+	}
+	available = {
+		FRA = { has_capitulated = yes }
+		NOT = {
+			has_idea = doctrine
+			has_idea = best
+			}
+		has_army_experience > 125
+		has_air_experience > 125
+		has_navy_experience > 125
+		command_power > 50	
+		}
+	complete_effect = {
+		add_potential_special_forces_tree = yes
+		army_experience = -125
+		air_experience = -125
+		navy_experience = -125
+		add_command_power = -50
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_timed_idea = {
+			idea = doctrine
+			days = 120
+			}
+		random_army_leader = {
+			limit = { is_leading_army = yes }
+				add_unit_leader_trait = commando
+			}
+		} # complete
+	days_remove = 120
+	remove_effect = { add_ideas = mass }
+	} # mass
+
+	best = {
+	icon = GFX_decision_generic_intelligence_operation
+	fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = JAP
+		tag = ENG
+		tag = ITA
+		tag = GER
+		}
+	}
+    available = {
+		FRA = { has_capitulated = yes }
+		NOT = { 
+			has_idea = doctrine
+			has_idea = mass
+			}
+		has_army_experience > 200
+		has_air_experience > 200
+		has_navy_experience > 200
+		command_power > 50	
+		}
+	complete_effect = {
+		add_potential_special_forces_tree = yes
+		army_experience = -200
+		air_experience = -200
+		navy_experience = -200
+		add_command_power = -50
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_timed_idea = {
+			idea = doctrine
+			days = 120
+			}
+		random_army_leader = {
+			limit = { is_leading_army = yes }
+				add_unit_leader_trait = commando
+			}
+		} # complete
+	days_remove = 120
+	remove_effect = { add_ideas = best }
+	} # best
+
+	relentless_offensive = {
+	icon = generic_ignite_civil_war
+	fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = JAP
+		tag = ENG
+		tag = ITA
+		tag = GER
+		}
+	}
+	available = {
+		FRA = { has_capitulated = yes }
+		NOT = { 
+			has_idea = doctrine
+			has_idea = methodical_battle
+			}
+		has_army_experience > 200
+		command_power > 50	
+		}
+	complete_effect = {
+		army_experience = -200
+		add_command_power = -50
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_timed_idea = { 
+			idea = doctrine
+			days = 120
+			}
+		} # complete
+	days_remove = 120
+	remove_effect = { add_ideas = relentless_offensive }
+	} # offensive
+
+	methodical_battle = {
+	icon = hol_draw_up_staff_plans
+	fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = JAP
+		tag = ENG
+		tag = ITA
+		tag = GER
+		}
+	}
+	available = {
+		FRA = { has_capitulated = yes }
+		NOT = { 
+			has_idea = doctrine
+			has_idea = relentless_offensive
+			}
+		has_army_experience > 200
+		command_power > 50	
+		}
+	complete_effect = {
+		army_experience = -200
+		add_command_power = -50
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_timed_idea = { 
+			idea = doctrine
+			days = 120
+			}
+		} # complete
+	days_remove = 120
+	remove_effect = { add_ideas = methodical_battle }
+	} # methodical
+
+	depth = {
+	icon = GFX_decision_infiltrate_state
+	fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = JAP
+		tag = ENG
+		tag = ITA
+		tag = GER
+		}
+	}
+	available = {
+		FRA = { has_capitulated = yes }
+		NOT = { 
+			has_idea = doctrine 
+			}
+		has_army_experience > 150
+		command_power > 50	
+		}
+	complete_effect = {
+		army_experience = -150
+		add_command_power = -50
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_timed_idea = { 
+			idea = doctrine
+			days = 100
+			}
+		} # complete
+	days_remove = 100
+	remove_effect = { add_ideas = depth }
+	} # depth
+
+	honor = {
+	icon = GFX_decision_generic_cavalry
+	fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = JAP
+		tag = ENG
+		tag = ITA
+		tag = GER
+		}
+	}
+    available = {
+		FRA = { has_capitulated = yes }
+		NOT = {
+			has_idea = doctrine
+			}
+		has_army_experience > 100
+		has_air_experience > 100
+		has_navy_experience > 100
+		command_power > 50
+		}
+	complete_effect = {
+		army_experience = -100
+		air_experience = -100
+		navy_experience = -100
+		add_command_power = -50
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_timed_idea = {
+			idea = doctrine
+			days = 60
+			}
+		} # complete
+	days_remove = 60
+	remove_effect = { add_ideas = honor }
+	} # honor
+
+	siege = {
+	icon = generic_scorched_earth
+	fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = JAP
+		tag = ENG
+		tag = ITA
+		tag = GER
+		}
+	}
+    available = {
+		FRA = { has_capitulated = yes }
+		NOT = { 
+			has_idea = doctrine
+			}
+		has_army_experience > 125
+		has_navy_experience > 75
+		command_power > 50
+		}
+	complete_effect = {
+		army_experience = -150
+		navy_experience = -100
+		add_command_power = -50
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_timed_idea = { 
+			idea = doctrine
+			days = 100
+			}
+		random_army_leader = {
+			limit = { is_leading_army = yes }
+				add_unit_leader_trait = fortress_buster
+			}
+		} # complete
+	days_remove = 100
+	remove_effect = { add_ideas = siege }
+	} # siege
+
+	adapt = {
+	icon = border_war
+	fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = JAP
+		tag = ENG
+		tag = ITA
+		tag = GER
+		}
+	}
+    available = {
+		NOT = { 
+			has_idea = doctrine
+			}
+		has_army_experience > 125
+		has_air_experience > 100
+		has_navy_experience > 100
+		command_power > 50
+		}
+	complete_effect = {
+		army_experience = -125
+		air_experience = -100
+		navy_experience = -100
+		add_command_power = -50
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_timed_idea = {
+			idea = doctrine
+			days = 100
+			}
+		random_army_leader = {
+			limit = { is_leading_army = yes }
+				add_unit_leader_trait = adaptable
+			}
+		} # complete
+	days_remove = 100
+	remove_effect = { add_ideas = adapt }
+	} # adapt
+
+} # Army Decisions
+
+
+
+
+

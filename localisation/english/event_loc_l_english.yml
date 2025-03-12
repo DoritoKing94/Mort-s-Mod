@@ -1,0 +1,27 @@
+﻿l_english:
+
+ mortis.1.t:0 "Endsieg"
+ mortis.1.d:0 "Although the Allied powers have successfully pushed the Germans back to their core territories, the Germans show no sign of surrender and seem determined to fight to their last breath for the final victory against the Allied Armies."
+ mortis.1.a:0 "The End draws near..."
+
+ mortis.2.t:0 "The Battle Of The Bulge"
+ mortis.2.d:0 "Following the allied landings and liberation of Paris, the Germans have been pushed back near the river Rhine. The Axis forces on the Western Front have been on the defensive until now, but under the cover of favorable weather, a new surprise offensive has been launched against the allies once more through the Ardennes Forest."
+ mortis.2.a:0 "Another German offensive through the Ardennes?!"
+ mortis.2.b:0 "Hold the line!"
+ mortis.2.c:0 "Throw them back into the sea!"
+
+ mortis.3.t:0 "Operation Spring Awakening"
+ mortis.3.d:0 "German progress on the Eastern Front has been seriously delayed and Hitler has been denied his prize of Moscow. But the launch of a new major offensive may allow the Axis regain their momentum in the East."
+ mortis.3.a:0 "Another offensive in the east?!"
+ 
+ mortis.6.t:0 "Death of Stalin"
+ mortis.6.d:0 "Facing defeat on all fronts and the annihilation of its military forces, the Soviet government may be in its final days..."
+ mortis.6.a:0 "The whole rotten structure has come crashing down..."
+ 
+ mortis.7.t:0 "Japan Strikes the Soviet Union"
+ mortis.7.d:0 "With all of mainland Asia now under its dominion, Tokyo has turned its attention north towards the Soviet Union..."
+ mortis.7.a:0 "Will this be a repeat of 1905?"
+ 
+ mortis.8.t:0 "Operation Compass"
+ mortis.8.d:0 "With indecision plaguing Rome, the British Commonwealth has now seized the initiative to launch the first strike against Italy."
+ mortis.8.a:0 "Can Mussolini hold on?"

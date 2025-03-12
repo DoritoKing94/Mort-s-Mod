@@ -1,0 +1,122 @@
+ideas = {
+    country = {
+
+	construction_focus = {
+		picture = generic_economic_increase
+		allowed = { }
+		modifier = {
+			production_speed_industrial_complex_factor = 0.15
+			production_speed_infrastructure_factor = 0.15
+			production_speed_buildings_factor = -0.05
+			global_building_slots_factor = 0.25				
+			military_industrial_organization_funds_gain = 0.1
+			}
+		}
+
+	production_focus = {
+		picture = ARG_construction_guilds
+		allowed = { }
+		modifier = {
+			industrial_capacity_factory = 0.15
+			production_factory_efficiency_gain_factor = 0.1
+			industrial_capacity_dockyard = 0.25
+			military_industrial_organization_funds_gain = 0.25
+			}
+		}
+
+	political_focus = {
+		picture = BRA_dasp
+		allowed = { }	
+		modifier = {
+			political_power_factor = 0.25
+			stability_factor = 0.25
+			command_power_gain = 0.05
+			military_industrial_organization_funds_gain = 0.1
+			}
+		}
+
+	france_reborn = {
+		picture = FRA_la_deluge
+		allowed = { }
+		# cancel = { controls_state = 16 }
+		modifier = {
+			non_core_manpower = 0.05
+			compliance_growth = 0.2
+			}
+		}
+
+	ships = {
+		picture = gre_political_instability_republican
+		allowed = { }
+		cancel = { }
+		modifier = {
+			industrial_capacity_dockyard = 0.6
+			repair_speed_factor = 0.8
+			refit_speed = 0.6
+			naval_retreat_speed = 0.2
+			consumer_goods_factor = 0.3
+			}
+		}
+
+	division_azul = {
+		picture = SPA_crusade_against_democracy
+		allowed = { }
+		modifier = {
+			send_volunteer_size = 24
+			acclimatization_cold_climate_gain_factor = 0.1
+			send_volunteers_tension = -1
+			send_volunteer_divisions_required = -1
+			enemy_justify_war_goal_time = 100
+			air_volunteer_cap = 2
+			}
+		}
+
+	spain_war = {
+		picture = SPA_embrace_the_spanish_destiny
+		allowed = { }
+		modifier = {
+			army_core_defence_factor = 0.1
+			army_core_attack_factor = 0.1
+			supply_combat_penalties_on_core_factor = -0.3
+			surrender_limit = 0.1
+			}
+		}
+
+	navy_defense = {
+		picture = generic_sea_focused_navy
+		allowed = { }
+		modifier = {
+			production_lack_of_resource_penalty_factor = -0.15
+			convoy_retreat_speed = 0.4
+			naval_retreat_speed = 0.2
+			navy_submarine_detection_factor = 0.15
+			}
+		}
+
+	navy_offense = {
+		picture = SWE_coastal_support
+		allowed = { }
+		modifier = {
+			convoy_retreat_speed = -0.25
+			naval_retreat_speed = -0.25
+			convoy_raiding_efficiency_factor = 0.2
+			navy_max_range_factor = 0.3
+			spotting_chance = 0.2
+			naval_has_potf_in_combat_attack = 0.05
+			naval_has_potf_in_combat_defense = 0.05
+			}
+		}
+
+	rubber_crisis = {
+		picture = generic_stockpile_fuel
+		allowed = { }
+		cancel = { any_allied_country = { controls_state = 336 } }
+		modifier = {
+			consumer_goods_factor = 0.5
+			}
+		}
+
+	} # country
+
+
+}

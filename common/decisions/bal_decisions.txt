@@ -1,0 +1,227 @@
+important_actions = {
+
+	balance_sov = {
+	icon = generic_decision
+	fire_only_once = yes
+	allowed = { tag = SOV }
+    available = { }
+	complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 6 }
+		add_resource = {
+			type = rubber
+    		amount = 20
+    		state = 586
+			}
+		add_resource = {
+			type = oil
+			amount = 20
+    		state = 586
+			}
+		} # effect
+	} # balance sov
+
+	balance_jap = {
+	icon = generic_decision
+	fire_only_once = yes
+	allowed = { tag = JAP }
+    available = { }
+	complete_effect = {
+		537 = {
+			add_resource = { type = oil amount = 16 }
+			add_building_construction = {
+				type = fuel_silo
+				level = 2
+				instant_build = yes }
+			add_extra_state_shared_building_slots = 2
+			}
+		add_resource = {
+  			type = rubber
+    		amount = 8
+    		state = 714
+			}
+		add_resource = {
+  			type = oil
+    		amount = 16
+    		state = 714
+			}
+		} # effect
+	} # balance jap
+	
+	balance_ita = {
+	icon = generic_decision
+	fire_only_once = yes
+	allowed = { tag = ITA }
+    available = { }
+	complete_effect = {
+		add_resource = {
+			type = rubber
+    		amount = 8
+    		state = 448
+			}
+		add_resource = {
+			type = oil
+			amount = 16
+    		state = 448
+			}
+		} # effect
+	} # balance ita
+
+	japan_puppet = {
+	icon = jap_pacific_guardian
+	fire_only_once = yes
+	ai_will_do = { base = 1 }
+	allowed = {
+		OR = {
+		tag = MAN
+		tag = SIA
+			}
+		}
+	complete_effect = {
+		add_ideas = japan_puppet
+			if = {
+				limit = { is_ai = no }
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = 75
+					producer = JAP
+						}
+					}
+				} #effect
+	} # puppet buff
+	
+	bal_swi = {
+	icon = generic_decision
+	fire_only_once = yes
+	ai_will_do = { factor = 1 }
+	allowed = { tag = SWI }
+    available = { date > 1937.1.1 }
+	complete_effect = {
+		complete_national_focus = SWI_seek_allied_trade
+		complete_national_focus = SWI_allied_gold
+		ENG = { country_event = { id = BBA_switzerland_trade.8 hours = 360 } }
+		} # effect
+	} # uk trade
+	
+	bal_swe = {
+	icon = generic_decision
+	fire_only_once = yes
+	ai_will_do = { factor = 1 }
+	allowed = { tag = SWE }
+    available = { date > 1939.1.1 }
+		target_trigger = {
+	    	FROM = {
+				tag = ENG
+        	}
+	    }
+	complete_effect = {
+			FROM = {
+	    		set_variable = { PREV.ball_bearing_country_target = THIS }
+	    	}
+	    	country_event = { id = AAT_Sweden_ball_bearing.1 }
+		} # effect
+	} #
+	
+	bal_swe2 = {
+	icon = generic_decision
+	fire_only_once = yes
+	ai_will_do = { factor = 1 }
+	allowed = { tag = SWE }
+    available = { date > 1939.6.1 }
+		target_trigger = {
+	    	FROM = {
+				tag = USA
+        	}
+	    }
+	complete_effect = {
+		# complete_national_focus = SWE_license_skf_ball_bearings
+			FROM = {
+	    		set_variable = { PREV.ball_bearing_country_target = THIS }
+	    	}
+	    	country_event = { id = AAT_Sweden_ball_bearing.1 }
+		} # effect
+	} # 
+	
+	bal_swe3 = {
+	icon = generic_decision
+	fire_only_once = yes
+	ai_will_do = { factor = 1 }
+	allowed = { tag = SWE }
+    available = { date > 1940.6.1 }
+		target_trigger = {
+	    	FROM = {
+				tag = SOV
+        	}
+	    }
+	complete_effect = {
+			FROM = {
+	    		set_variable = { PREV.ball_bearing_country_target = THIS }
+	    	}
+	    	country_event = { id = AAT_Sweden_ball_bearing.1 }
+		} # effect
+	} # 
+	
+	mort_join = {
+        icon = GFX_decision_hol_exchange_intelligence_data
+        fire_only_once = yes
+		allowed = {
+			OR = {
+				tag = MEX
+				tag = BRA
+				}
+			}
+        available = {
+            GER = {
+                has_war_with = ENG
+                has_war_with = FRA
+            }
+        }
+        visible = {
+            NOT = {
+                ROOT = {
+                    is_in_faction_with = ENG
+                }
+            }
+        }
+        days_remove = 5
+
+        remove_effect = {
+            ENG = {
+                add_to_faction = ROOT
+            }
+			ROOT = { add_ideas = bel_interpreters_ns }
+        }
+
+        ai_will_do = { factor = 0 }
+    }
+	
+	bel_fix = {
+	icon = generic_decision
+	fire_only_once = yes
+	ai_will_do = { factor = 1 }
+	allowed = { tag = swi }
+    available = { BEL = { is_in_faction_with = USA } }
+	complete_effect = {
+		USA = { add_ideas = bel_interpreters_ns }
+		BRA = { add_ideas = bel_interpreters_ns }
+		MEX = { add_ideas = bel_interpreters_ns }
+		} # effect
+	} # 
+	
+	ger_fix = {
+	icon = generic_decision
+	fire_only_once = yes
+	ai_will_do = { factor = 1 }
+	allowed = { tag = SWI }
+    available = { controls_state = 540 }
+	complete_effect = {
+		GER = {
+			GER_modify_industrial_modifier = yes
+			add_to_variable = {
+			GER_industrial_consumer_goods_factor = 0.75
+			tooltip = consumer_goods_factor_tt
+				}
+			}
+		} # effect
+	} # 
+	
+}

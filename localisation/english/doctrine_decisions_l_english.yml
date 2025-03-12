@@ -1,0 +1,38 @@
+﻿l_english:
+
+ doctrine:0 "Doctrinal Development"
+ doctrine_desc:0 "The development and implementation of new military theory built on lessons of war is underway by this nation's High Command."
+
+ airland:0 "Airland Battle"
+ airland_desc:0 "Expanded integration of our ground forces with friendly air units will bolster our capabilities but also make us more vulnerable to hostile airforces"
+
+ airshield:0 "Air Shield"
+ airshield_desc:0 "Measures such as camouflage will diminish the potent threat of enemy airpower but also isolate us from any friendly air support"
+
+ mass:0 "Large-scale Shock Troop training"
+ mass_desc:0 "The training of specialized troops on previously unseen scales will allow us to form an elite army capable of any task"
+
+ best:0 "Best of the Best"
+ best_desc:0 "Few have what it takes to go above and beyond to triumph despite all odds"
+
+ relentless_offensive:0 "Cult of the Offensive"
+ relentless_offensive_desc:0 "Through relentless offensives we shall route any enemy!"
+
+ methodical_battle:0 "Methodical Battle"
+ methodical_battle_desc:0 "With enough thorough planning, even the chaos of war can be accounted for and controlled"
+
+ depth:0 "Defence in Depth"
+ depth_desc:0 "An elastic deployment of troops will wear down and dull even the sharpest spearhead"
+
+ honor:0 "Honor in War"
+ honor_desc:0 "Even amidst the chaos and destruction of war, we must maintain our integrity and a Code of honor."
+
+ siege:0 "Assault Pioneers"
+ siege_desc:0 "No Barrier Too Great"
+ 
+ adapt:0 "Terrain Adapation"
+ adapt_desc:0 "Understanding and responding to battlefield terrain is key to victory"
+
+
+ enigma:0 "Enigma"
+ enigma_desc:0 "C#&6@$&!@)"

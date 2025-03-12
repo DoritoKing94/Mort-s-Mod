@@ -1,0 +1,93 @@
+army_decisions = {
+
+	review_doctrine = {
+	icon = generic_army_support
+	fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = JAP
+		tag = ENG
+		tag = ITA
+		tag = GER
+		}
+	}
+	available = {
+		FRA = { has_capitulated = yes }
+		command_power > 49
+		}
+	complete_effect = {
+		army_experience = 100
+		air_experience = 100
+		navy_experience = 100
+		add_command_power = -50
+	add_doctrine_cost_reduction = {
+		name = "Review Doctrine"
+		cost_reduction = 0.5
+		uses = 2
+		category = land_doctrine
+		}
+	add_doctrine_cost_reduction = {
+		name = "Review Doctrine"
+		cost_reduction = 0.5
+		uses = 2
+		category = air_doctrine
+		}
+	add_doctrine_cost_reduction = {
+		name = "Review Doctrine"
+		cost_reduction = 0.5
+		uses = 2
+		category = naval_doctrine
+		}
+			} #effects
+	ai_will_do = { base = 1 }
+	} # Review Doctrine
+
+    officer_training_corps = {
+    icon = GFX_decision_SWI_guisan_speech
+    fire_only_once = yes
+	allowed = {
+		NOT = {
+		tag = USA
+		tag = SOV
+		tag = GER
+		tag = JAP
+		tag = ENG
+		tag = ITA
+		}
+	}
+    available = {
+		NOT = { controls_state = 16 }
+		threat > 0.25
+            any_owned_state = {
+				is_fully_controlled_by = ROOT
+                arms_factory > 0
+            }
+        }
+
+    complete_effect = {
+        random_owned_controlled_state = {
+            limit = {
+                    arms_factory > 0
+                }
+            remove_building = {
+                type = arms_factory
+                level = 1
+                }
+            		}
+        add_ideas = officer_training_corps
+        } # Complete
+	modifier = {
+		consumer_goods_factor = 0.15
+		civilian_factory_use = 1
+		}
+        days_remove = 60  
+    } # staff
+
+} # Army Decisions
+
+
+
+
+

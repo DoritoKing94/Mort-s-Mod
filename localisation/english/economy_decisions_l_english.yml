@@ -1,0 +1,34 @@
+﻿l_english:
+ economic_decisions:0 "Economic Management"
+ economic_decisions_desc:0 "Pick between a political, civilian or war production focus for your nation (Mutually exclusive). Invest in the creation of new industrial sites and develop resource processing capabilities within your nation (Repeatable)."
+ 
+ construction_focus:0 "Light Industry Focus"
+ construction_focus_desc:0 "Concentrate our national resources towards the expansion of civilian industries."
+ 
+ political_focus:0 "Political Focus"
+ political_focus_desc:0 "Concentrate our national resources towards stabilizing the political sphere."
+
+ production_focus:0 "Heavy Industry Focus"
+ production_focus_desc:0 "Concentrate our national resources towards the development of Heavy industry."
+
+ increase_technology:0 "Expand Military Research Institutes"
+ increase_technology_desc:0 "Investment into the expansion of new research and development facilities."
+
+ state_development_1:0 "New Core Industrial District"
+ state_development_1_desc:0 "Zone land and build infrastructure to support a new industrial district."
+
+ colonial_development:0 "Expand Colonial Industry"
+ colonial_development_desc:0 "Zone land and build infrastructure to support new industrial districts in our colonies."
+
+ invest_in_steel:0 "Support the Steel industry"
+ invest_in_steel_desc:0 "Huge smelters are expanded in large industrial zones to refine steel."
+
+ invest_in_aluminium:0 "Support the Aluminium industry"
+ invest_in_aluminium_desc:0 "Huge smelters are expanded in large industrial zones to process aluminium."
+
+ invest_in_chromium:0 "Support the Chromium industry"
+ invest_in_chromium_desc:0 "It is in the national interest to support prospecting and mining of these valuable minerals."
+
+ invest_in_tungsten:0 "Support the tungsten industry"
+ invest_in_tungsten_desc:0 "It is in the national interest to support prospecting and mining of these valuable minerals."
+ 

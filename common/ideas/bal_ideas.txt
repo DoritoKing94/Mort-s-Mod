@@ -1,0 +1,87 @@
+ideas = {
+	country = {
+	
+	japan_puppet = {
+		allowed = { }
+		picture = man_militarism
+		modifier = {
+			production_speed_buildings_factor = 0.15
+			air_fuel_consumption_factor = -0.20
+			navy_fuel_consumption_factor = -0.20
+			naval_doctrine_cost_factor = -0.20
+			air_doctrine_cost_factor = -0.20
+			industry_repair_factor = 0.20
+			supply_consumption_factor = -0.10
+			industrial_capacity_factory = 0.15
+			industrial_capacity_dockyard = 0.15
+			production_lack_of_resource_penalty_factor = -0.15
+			}
+		}
+
+	man_collab = {
+		allowed = { }
+		cancel = { is_ai = no }
+		picture = ARG_political_corruption_modifier
+		modifier = {
+			cic_to_overlord_factor = 0.70
+			mic_to_overlord_factor = 0.30
+			}
+		}
+		
+	man_puppet = {
+		allowed = { }
+		cancel = { is_ai = yes }
+		picture = ARG_political_corruption_modifier
+		modifier = {
+			cic_to_overlord_factor = 0.15
+			mic_to_overlord_factor = 0.00
+			}
+		}
+		
+	sia_puppet  = {
+		allowed = { }
+		cancel = { is_ai = no }
+		picture = ARG_political_corruption_modifier
+		modifier = {
+			cic_to_overlord_factor = 0.8
+			mic_to_overlord_factor = 0.9
+			}
+		}
+
+	sov_alone = {
+		picture = SOV_transformation_of_nature
+		allowed = { tag = SOV }
+		cancel = { ENG = { controls_state = 126 } }
+		modifier = {
+			justify_war_goal_time = -0.75
+			offensive_war_stability_factor = 0.3
+			war_support_factor = 0.3
+			training_time_factor = -0.15
+			surrender_limit = 0.05
+			}
+		}
+
+	victory_plan = {
+		picture = hol_the_fourth_ally
+		allowed = { }
+		cancel = { ENG = { controls_state = 126 } }	
+		modifier = {
+			production_factory_max_efficiency_factor = 0.2
+			industrial_capacity_dockyard = 0.3
+			global_building_slots_factor = 0.3
+			}
+		}
+		
+	liberty = {
+		picture = ARG_american_allyship
+		allowed = { }
+		cancel = { ENG = { controls_state = 126 } }	
+		modifier = {
+			production_factory_max_efficiency_factor = 0.05
+			industrial_capacity_dockyard = 0.2
+			global_building_slots_factor = 0.15
+			}
+		}
+			
+	} # country
+}

@@ -1,0 +1,7 @@
+army_decisions = {
+     icon = military_operation
+		priority = 8
+     allowed = {
+		has_dlc = "Waking the Tiger"
+		}
+}

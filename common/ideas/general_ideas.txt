@@ -1,0 +1,44 @@
+ideas = {
+	country = {
+
+		peacetime = {
+			allowed = { }
+			cancel = {
+				OR = {
+					has_war = yes
+					any_country = {
+						has_volunteers_amount_from = {
+   						tag = var:my_country
+						count > 0
+							}
+						}	
+					} #o
+				}
+			picture = chi_army_corruption3
+			modifier = {
+				training_time_army_factor = -0.8
+				experience_gain_army_unit_factor = 0.5
+				air_training_xp_gain_factor = 10
+				experience_gain_navy_unit_factor = 10
+				air_accidents_factor = -3
+				naval_accidents_chance = -3
+				mobilization_speed = 5
+				army_fuel_consumption_factor = -0.99
+				air_fuel_consumption_factor = -0.99
+				navy_fuel_consumption_factor = -0.99
+				minimum_training_level = -1
+				}
+		} # peacetime
+
+		ai_limit = {
+			allowed = { }
+			cancel = { is_ai = no }
+			picture = CHL_ligas_patrioticas
+			modifier = {
+				industrial_capacity_factory = -2
+				compliance_gain = 1
+			}
+		}
+		
+	} # country
+}
