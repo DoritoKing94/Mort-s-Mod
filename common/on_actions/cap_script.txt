@@ -1,0 +1,91 @@
+on_actions = {
+
+	#Fixed capitulations - AIs onlys
+
+	#ETH capitulate event
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					TAG = ETH
+					NOT = {
+						has_global_flag = ETH_capitulated
+					}
+					has_game_rule = {
+						rule = BOG_PEACE_SCRIPTS
+						option = BOG_PEACE_SCRIPTS_OFF
+					}
+				}
+				eth_capitulation_peace_deal = yes
+			}
+		}
+	}
+
+	#YUG capitulate event
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					TAG = YUG
+					YUG = {
+						has_war_with = ITA
+					}
+					NOT = {
+						has_global_flag = YUG_capitulated
+					}
+					has_game_rule = {
+						rule = BOG_PEACE_SCRIPTS
+						option = BOG_PEACE_SCRIPTS_OFF
+					}
+					NOT = {
+						YUG = {
+							is_in_faction_with = ENG
+						}
+					}
+				}
+				yug_capitulation_peace_deal = yes			
+			}
+		}
+	}
+
+	#GRE capitulate event
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					TAG = GRE
+					NOT = {
+						has_global_flag = GRE_capitulated
+					}
+					has_game_rule = {
+						rule = BOG_PEACE_SCRIPTS
+						option = BOG_PEACE_SCRIPTS_OFF
+					}
+				}
+				gre_capitulation_peace_deal = yes
+			}
+		}
+	}
+
+	#CHI capitulation event
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					TAG = CHI
+						
+					NOT = {
+						has_global_flag = CHI_capitulated
+					}
+					has_game_rule = {
+						rule = BOG_PEACE_SCRIPTS
+						option = BOG_PEACE_SCRIPTS_OFF
+					}
+				}
+				JAP = { add_threat = 20 }
+				chi_capitulation_peace_deal = yes				
+			}
+		}
+	}
+	
+}

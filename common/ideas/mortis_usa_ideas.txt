@@ -7,7 +7,7 @@ ideas = {
 		cancel = { has_war = yes } 
 		modifier = {
 			send_volunteers_tension = -1
-			air_volunteer_cap = -2
+			air_volunteer_cap = 1
 			army_armor_attack_factor = -0.2
 			}
 		}
@@ -23,8 +23,9 @@ ideas = {
 			experience_gain_army_factor = -0.3
 			experience_gain_navy_factor = -0.3
 			experience_gain_air_factor = -0.3
-			research_speed_factor = 0.15
+			research_speed_factor = 0.1
 			production_speed_arms_factory_factor = -0.3
+			production_speed_dockyard_factor = -0.1
 			}
 		}
 
@@ -35,7 +36,7 @@ ideas = {
 		modifier = {
 			consumer_goods_factor = 0.05
 			political_power_factor = 0.25
-			production_speed_buildings_factor = 0.1
+			production_speed_buildings_factor = 0.2
 			}
 		}
 
@@ -43,7 +44,7 @@ ideas = {
 		picture = ARG_american_allyship
 		allowed = { }
 		modifier = {
-			production_speed_buildings_factor = 0.2
+			production_speed_buildings_factor = 0.1
 			global_building_slots_factor = 0.15
 			war_support_weekly = 0.001
 			}
@@ -64,9 +65,9 @@ ideas = {
 		picture = ARG_public_works_investment
 		allowed = { }
 		modifier = {
-			production_speed_industrial_complex_factor = 0.15
-			production_speed_infrastructure_factor = 0.15
-			production_speed_buildings_factor = 0.1
+			production_speed_industrial_complex_factor = 0.2
+			production_speed_infrastructure_factor = 0.2
+			local_resources_factor = 0.05
 			}
 		}
 		
@@ -74,6 +75,7 @@ ideas = {
 		picture = HABSBURG_economy
 		allowed = { }
 		modifier = {
+			consumer_goods_factor = 0.05
 			global_building_slots_factor = 0.2
 			production_speed_buildings_factor = 0.3
 			production_factory_max_efficiency_factor = 0.1
@@ -86,9 +88,10 @@ ideas = {
 		picture = SWI_spirit_of_helvetia_defensive_peace
 		allowed = { }
 		modifier = {
-			production_speed_buildings_factor = -0.15
-			production_speed_arms_factory_factor = 0.4
-			production_speed_dockyard_factor = 0.4
+			consumer_goods_factor = -0.1
+			production_speed_buildings_factor = -0.1
+			production_speed_arms_factory_factor = 0.3
+			production_speed_dockyard_factor = 0.3
 			industrial_capacity_dockyard = 0.2
 			industrial_capacity_factory = 0.2
 			}
@@ -102,7 +105,7 @@ ideas = {
 			conversion_cost_civ_to_mil_factor = -0.2
 			global_building_slots_factor = 0.1
 			production_factory_efficiency_gain_factor = 0.1
-			production_factory_max_efficiency_factor = 0.25
+			production_factory_max_efficiency_factor = 0.2
 			military_industrial_organization_funds_gain = 0.2
 			production_speed_arms_factory_factor = 0.1
 			production_speed_dockyard_factor = 0.1
@@ -110,7 +113,7 @@ ideas = {
 		}
 
 	american_science = {
-		picture = usa_magic
+		picture = SOV_atomic_bomb_project
 		allowed = { }	
 		modifier = {
 			research_speed_factor = 0.1
@@ -124,9 +127,9 @@ ideas = {
 		picture = SWE_land_air_warfare
 		allowed = { }	
 		modifier = {
-			experience_gain_army_factor = 0.5
-			experience_gain_navy_factor = 0.5
-			experience_gain_air_factor = 0.5
+			experience_gain_army_factor = 0.3
+			experience_gain_navy_factor = 0.3
+			experience_gain_air_factor = 0.3
 			training_time_factor = -0.2
 			}
 		}
@@ -142,7 +145,7 @@ ideas = {
 			industrial_capacity_dockyard = 0.2
 			global_building_slots_factor = 0.2
 			military_industrial_organization_funds_gain = 0.2
-			training_time_factor = -0.1
+			training_time_factor = -0.2
 			}
 		}
 

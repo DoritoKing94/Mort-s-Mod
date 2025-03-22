@@ -5,12 +5,17 @@ AI_annex = {
         fire_only_once = yes
 		priority = 10
 		allowed = { tag = JAP }
-        available = { MAN = { is_ai = yes } }
+        available = {
+			AND = {
+                MAN = { is_ai = yes }
+				NOT = { country_exists = CHI }
+				}
+			}
         visible = { country_exists = MAN }
         complete_effect = {
 			MAN = { complete_national_focus = MAN_national_cooperation_government }
 			MAN = { add_ideas = man_collab }
-						}
+		}
     } # man collab
 	
 	man_puppet = {
@@ -29,7 +34,7 @@ AI_annex = {
 			}
         complete_effect = {
 			MAN = { add_ideas = man_puppet }
-						}
+		}
     } # man factory after china
 	
 	man_res = {
