@@ -18,12 +18,12 @@ army_decisions = {
 		NOT = {
 			has_idea = doctrine
 			}
-		has_army_experience > 75
+		has_army_experience > 100
 		has_air_experience > 200
 		command_power > 50
 		}
 	complete_effect = {
-		army_experience = -75
+		army_experience = -100
 		air_experience = -200
 		add_command_power = -50
 		
@@ -59,12 +59,12 @@ army_decisions = {
 			has_idea = doctrine
 			}
 		has_army_experience > 150
-		has_air_experience > 100
+		has_air_experience > 150
 		command_power > 50
 		}
 	complete_effect = {
 		army_experience = -150
-		air_experience = -100
+		air_experience = -150
 		add_command_power = -50
 		
 		custom_effect_tooltip = generic_skip_one_line_tt
@@ -102,16 +102,16 @@ army_decisions = {
 			has_idea = doctrine
 			has_idea = best
 			}
-		has_army_experience > 125
-		has_air_experience > 125
-		has_navy_experience > 125
+		has_army_experience > 150
+		has_air_experience > 150
+		has_navy_experience > 150
 		command_power > 50	
 		}
 	complete_effect = {
 		add_potential_special_forces_tree = yes
-		army_experience = -125
-		air_experience = -125
-		navy_experience = -125
+		army_experience = -150
+		air_experience = -150
+		navy_experience = -150
 		add_command_power = -50
 		
 		custom_effect_tooltip = generic_skip_one_line_tt
@@ -303,15 +303,15 @@ army_decisions = {
 		NOT = {
 			has_idea = doctrine
 			}
-		has_army_experience > 100
-		has_air_experience > 100
-		has_navy_experience > 100
+		has_army_experience > 125
+		has_air_experience > 125
+		has_navy_experience > 125
 		command_power > 50
 		}
 	complete_effect = {
-		army_experience = -100
-		air_experience = -100
-		navy_experience = -100
+		army_experience = -125
+		air_experience = -125
+		navy_experience = -125
 		add_command_power = -50
 		
 		custom_effect_tooltip = generic_skip_one_line_tt
@@ -343,8 +343,8 @@ army_decisions = {
 		NOT = { 
 			has_idea = doctrine
 			}
-		has_army_experience > 125
-		has_navy_experience > 75
+		has_army_experience > 150
+		has_navy_experience > 100
 		command_power > 50
 		}
 	complete_effect = {
@@ -384,15 +384,15 @@ army_decisions = {
 		NOT = { 
 			has_idea = doctrine
 			}
-		has_army_experience > 125
-		has_air_experience > 100
-		has_navy_experience > 100
+		has_army_experience > 250
+		has_air_experience > 150
+		has_navy_experience > 150
 		command_power > 50
 		}
 	complete_effect = {
-		army_experience = -125
-		air_experience = -100
-		navy_experience = -100
+		army_experience = -250
+		air_experience = -150
+		navy_experience = -150
 		add_command_power = -50
 		
 		custom_effect_tooltip = generic_skip_one_line_tt

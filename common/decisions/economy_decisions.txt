@@ -17,24 +17,24 @@ economic_decisions = {
 		NOT = { controls_state = 16 }
 			any_owned_state = {
                 is_fully_controlled_by = ROOT
-                arms_factory > 2
+                arms_factory > 5
             	}
      	} # Available End
      	complete_effect = {
 		add_research_slot = 1
             random_owned_controlled_state = {
                 limit = {
-                	arms_factory > 2
+                	arms_factory > 5
                 }
-                remove_building = { 
+                remove_building = {
                    type = arms_factory
-                   level = 3
+                   level = 6
                 }
             }         
         } # effect
 	modifier = {
-		civilian_factory_use = 2
-		consumer_goods_factor = 0.3
+		civilian_factory_use = 4
+		consumer_goods_factor = 0.4
 		}
         days_remove = 100
     	remove_effect = { }    	
@@ -109,7 +109,7 @@ economic_decisions = {
 		num_of_civilian_factories_available_for_projects > 5
             any_owned_state = {
                 NOT = { is_core_of = ROOT }
-				compliance > 40
+				compliance > 50
                 is_fully_controlled_by = ROOT
                 free_building_slots = {
                     building = arms_factory
@@ -144,7 +144,7 @@ economic_decisions = {
 
     invest_in_steel = {
     icon = steel
-	cost = 30
+	cost = 40
     fixed_random_seed = no
 	allowed = {
 		NOT = { 
@@ -157,7 +157,7 @@ economic_decisions = {
 			}
 		}
     	available = {
-    		num_of_civilian_factories_available_for_projects > 3
+    		num_of_civilian_factories_available_for_projects > 4
             any_owned_state = {
             is_core_of = ROOT
             is_fully_controlled_by = ROOT    
@@ -180,11 +180,11 @@ economic_decisions = {
                 #      has_state_category = city                    
                 #}
             	}
-            	add_resource = {type = steel amount = 7}
+            	add_resource = { type = steel amount = 5 }
             }               
         }
         modifier = {
-        	civilian_factory_use = 4
+        	civilian_factory_use = 5
         }
         days_remove = 70
     	days_re_enable = 1
@@ -199,7 +199,7 @@ economic_decisions = {
 
     invest_in_aluminium = {
     icon = aluminium
-	cost = 30
+	cost = 40
     fixed_random_seed = no
 	allowed = {
 		NOT = { 
@@ -212,7 +212,7 @@ economic_decisions = {
 			}
 		}
     	available = {
-    		num_of_civilian_factories_available_for_projects > 3
+    		num_of_civilian_factories_available_for_projects > 4
             any_owned_state = {
             is_core_of = ROOT
             is_fully_controlled_by = ROOT    
@@ -235,11 +235,11 @@ economic_decisions = {
                     #  has_state_category = city 
                     #}
                 }
-                add_resource = {type = aluminium amount = 5 }
+                add_resource = {type = aluminium amount = 4 }
             }               
         }
         modifier = {
-        	civilian_factory_use = 4
+        	civilian_factory_use = 5
         }
         days_remove = 70
     	days_re_enable = 1
@@ -252,7 +252,7 @@ economic_decisions = {
 
     invest_in_chromium = {
     icon = chromium
-	cost = 30
+	cost = 40
     fixed_random_seed = no
 	allowed = {
 		NOT = { 
@@ -265,18 +265,18 @@ economic_decisions = {
 			}
 		}
     	available = {
-    		num_of_civilian_factories_available_for_projects > 3
+    		num_of_civilian_factories_available_for_projects > 4
     	}
     	complete_effect = {
             random_owned_controlled_state = {
             	LIMIT = {
             		is_core_of = ROOT
             	}
-            	add_resource = {type = chromium amount = 5 }
+            	add_resource = {type = chromium amount = 4 }
             }               
         }
         modifier = {
-        	civilian_factory_use = 4
+        	civilian_factory_use = 5
         }
         days_remove = 70
     	days_re_enable = 1
@@ -291,7 +291,7 @@ economic_decisions = {
 
     invest_in_tungsten = {
     icon = tungsten
-	cost = 30
+	cost = 40
     fixed_random_seed = no
 	allowed = {
 		NOT = { 
@@ -303,16 +303,16 @@ economic_decisions = {
 		tag = ITA
 			}
 		}
-    	available = { num_of_civilian_factories_available_for_projects > 3 }
+    	available = { num_of_civilian_factories_available_for_projects > 4 }
     	complete_effect = {
             random_owned_controlled_state = {
             	LIMIT = {
             		is_core_of = ROOT
             	}
-            	add_resource = { type = tungsten amount = 5 }
+            	add_resource = { type = tungsten amount = 4 }
             }               
         }
-        modifier = { civilian_factory_use = 4 }
+        modifier = { civilian_factory_use = 5 }
         days_remove = 70
     	days_re_enable = 1
     	fire_only_once = no

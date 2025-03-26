@@ -68,8 +68,8 @@ ideas = {
 		modifier = {
 			production_factory_max_efficiency_factor = 0.2
 			industrial_capacity_dockyard = 0.3
-			global_building_slots_factor = 0.3
-			local_resources_factor = 0.2
+			global_building_slots_factor = 0.2
+			local_resources_factor = 0.1
 			}
 		}
 		
@@ -80,10 +80,10 @@ ideas = {
 		modifier = {
 			production_factory_max_efficiency_factor = 0.05
 			industrial_capacity_dockyard = 0.2
-			global_building_slots_factor = 0.15
+			global_building_slots_factor = 0.1
 			local_resources_factor = 0.1
 			}
 		}
-			
+
 	} # country
 }

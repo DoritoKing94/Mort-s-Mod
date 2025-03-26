@@ -887,9 +887,9 @@ technologies = {
 		enable_tactic = tactic_sf_ambush
 		
 		##Mort
-		army_core_defence_factor = 0.05
 		army_core_attack_factor = 0.05
-		land_reinforce_rate = 0.02
+		army_core_defence_factor = 0.1
+		land_reinforce_rate = 0.03
 		##
 		
 		doctrine = yes	
@@ -1244,7 +1244,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		category_line_artillery = {
-			soft_attack = 0.10
+			soft_attack = 0.15
 			hard_attack = 0.10
 			air_attack = 0.10
 		}
@@ -1774,11 +1774,11 @@ technologies = {
 		} #0.05
 		category_all_infantry = {
 			soft_attack = 0.10
-			hard_attack = 0.10
+			hard_attack = 0.05
 		} #0.05
 		category_artillery = {
 			soft_attack = 0.10
-			hard_attack = 0.10
+			hard_attack = 0.05
 		} #0.05
 		##
 		
@@ -2653,7 +2653,7 @@ technologies = {
 	infiltration_in_depth = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		land_reinforce_rate = 0.05 ##Mort
+		land_reinforce_rate = 0.06 ##Mort
 		
 		artillery_brigade = { combat_width = -0.5 }
 		rocket_artillery_brigade = { combat_width = -0.5 }
@@ -2927,6 +2927,8 @@ technologies = {
 
 		##Mort
 		army_strength_factor = 0.2
+		#experience_gain_army_unit_factor = 0.05
+		experience_loss_factor = 0.10
 		category_army = {
 			max_organisation = 10
 			default_morale = 0.1

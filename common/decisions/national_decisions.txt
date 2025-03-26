@@ -64,7 +64,6 @@ important_actions = {
 		GER = { add_to_faction = ROOT }
 		add_ideas = spain_war
 		add_state_core = 118
-		complete_national_focus = SPA_defenses_against_invasion
 
 			POR = {
 				every_unit_leader = {

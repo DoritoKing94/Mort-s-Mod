@@ -6,7 +6,7 @@ important_actions = {
 	allowed = { tag = SOV }
     available = { }
 	complete_effect = {
-		add_offsite_building = { type = industrial_complex level = 6 }
+		add_offsite_building = { type = industrial_complex level = 5 }
 		add_resource = {
 			type = rubber
     		amount = 20
@@ -82,7 +82,7 @@ important_actions = {
 				limit = { is_ai = no }
 				add_equipment_to_stockpile = {
 					type = convoy
-					amount = 75
+					amount = 50
 					producer = JAP
 						}
 					}
