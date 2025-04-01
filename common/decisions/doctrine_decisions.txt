@@ -120,10 +120,6 @@ army_decisions = {
 			idea = doctrine
 			days = 120
 			}
-		random_army_leader = {
-			limit = { is_leading_army = yes }
-				add_unit_leader_trait = commando
-			}
 		} # complete
 	days_remove = 120
 	remove_effect = { add_ideas = mass }

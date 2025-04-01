@@ -23,8 +23,8 @@ ideas = {
 		cancel = { is_ai = no }
 		picture = ARG_political_corruption_modifier
 		modifier = {
-			cic_to_overlord_factor = 0.90
-			mic_to_overlord_factor = 0.90
+			cic_to_overlord_factor = 0.95
+			mic_to_overlord_factor = 0.95
 			}
 		}
 		
@@ -33,7 +33,7 @@ ideas = {
 		cancel = { is_ai = yes }
 		picture = ARG_political_corruption_modifier
 		modifier = {
-			cic_to_overlord_factor = 0.4
+			cic_to_overlord_factor = 0.35
 			mic_to_overlord_factor = 0.5
 			}
 		}
@@ -54,10 +54,9 @@ ideas = {
 		cancel = { ENG = { controls_state = 126 } }
 		modifier = {
 			justify_war_goal_time = -0.75
-			offensive_war_stability_factor = 0.3
-			war_support_factor = 0.3
-			training_time_factor = -0.15
-			surrender_limit = 0.05
+			offensive_war_stability_factor = 0.2
+			war_support_factor = 0.2
+			training_time_factor = -0.1
 			}
 		}
 

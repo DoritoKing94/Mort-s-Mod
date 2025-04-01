@@ -570,7 +570,7 @@ AI_annex = {
 			}
 		} #effects		
     } #
-	
+
 	annex_ins = {
         icon = GFX_decision_eng_trade_unions_support
 		priority = 9

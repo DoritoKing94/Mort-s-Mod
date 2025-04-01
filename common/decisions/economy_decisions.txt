@@ -17,18 +17,18 @@ economic_decisions = {
 		NOT = { controls_state = 16 }
 			any_owned_state = {
                 is_fully_controlled_by = ROOT
-                arms_factory > 5
+                arms_factory > 4
             	}
      	} # Available End
      	complete_effect = {
 		add_research_slot = 1
             random_owned_controlled_state = {
                 limit = {
-                	arms_factory > 5
+                	arms_factory > 4
                 }
                 remove_building = {
                    type = arms_factory
-                   level = 6
+                   level = 5
                 }
             }         
         } # effect

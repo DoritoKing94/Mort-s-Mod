@@ -30,9 +30,9 @@ important_actions = {
 			add_resource = { type = oil amount = 16 }
 			add_building_construction = {
 				type = fuel_silo
-				level = 2
+				level = 3
 				instant_build = yes }
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 3
 			}
 		add_resource = {
   			type = rubber
@@ -92,20 +92,20 @@ important_actions = {
 	bal_swi = {
 	icon = generic_decision
 	fire_only_once = yes
-	ai_will_do = { factor = 1 }
+	ai_will_do = { factor = 0 }
 	allowed = { tag = SWI }
-    available = { date > 1937.1.1 }
+    available = { date > 1938.1.1 }
 	complete_effect = {
-		complete_national_focus = SWI_seek_allied_trade
-		complete_national_focus = SWI_allied_gold
-		ENG = { country_event = { id = BBA_switzerland_trade.8 hours = 360 } }
+		#complete_national_focus = SWI_seek_allied_trade
+		#complete_national_focus = SWI_allied_gold
+		#ENG = { country_event = { id = BBA_switzerland_trade.8 hours = 360 } }
 		} # effect
 	} # uk trade
 	
 	bal_swe = {
 	icon = generic_decision
 	fire_only_once = yes
-	ai_will_do = { factor = 1 }
+	ai_will_do = { factor = 0 }
 	allowed = { tag = SWE }
     available = { date > 1939.1.1 }
 		target_trigger = {
@@ -124,7 +124,7 @@ important_actions = {
 	bal_swe2 = {
 	icon = generic_decision
 	fire_only_once = yes
-	ai_will_do = { factor = 1 }
+	ai_will_do = { factor = 0 }
 	allowed = { tag = SWE }
     available = { date > 1939.6.1 }
 		target_trigger = {
@@ -212,8 +212,9 @@ important_actions = {
 	fire_only_once = yes
 	ai_will_do = { factor = 1 }
 	allowed = { tag = SWI }
-    available = { controls_state = 540 }
-	complete_effect = {
+    available = { GER = { has_completed_focus = GER_prioritize_economic_growth } }
+	days_remove = 60
+	remove_effect = {
 		GER = {
 			GER_modify_industrial_modifier = yes
 			add_to_variable = {

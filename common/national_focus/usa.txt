@@ -2419,11 +2419,19 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = USA_arsenal_of_democracy }
 		available = {
-			has_war_support > 0.3
 			OR = {
-				has_completed_focus = USA_continue_the_new_deal
-				date > 1940.1.1
-				ENG = { has_war_with = GER }
+				AND = {
+					has_completed_focus = USA_continue_the_new_deal
+					date > 1938.1.1
+					has_war_support > 0.3
+					} #Left
+				AND = {
+					has_completed_focus = USA_reestablish_the_gold_standard
+					date > 1940.1.1
+					} #Right
+				#OR = {
+				#	ENG = { has_war_with = GER }
+				#	}
 				}
 			democratic > 0.95
 		}
@@ -2497,6 +2505,10 @@ focus_tree = {
 			OR = {
 				has_war = yes
 				has_war_support > 0.3
+				AND = {
+					has_completed_focus = USA_reestablish_the_gold_standard
+					has_war_support > 0.15
+					} #Right
 			}
 		}
 
@@ -2781,6 +2793,10 @@ focus_tree = {
 			OR = {
 				has_war_support > 0.3
 				has_war = yes
+				AND = {
+					has_completed_focus = USA_reestablish_the_gold_standard
+					has_war_support > 0.15
+					} #Right
 			}
 		}
 
@@ -3174,13 +3190,19 @@ focus_tree = {
 		}
 
 		available = {
-			threat > 0.05
-			if = {
-				limit = {
-					has_completed_focus = USA_neutrality_act
+			OR = {
+				AND = {
+					NOT = { has_completed_focus = USA_neutrality_act }
+					threat > 0.05
 					}
 				threat > 0.19
 				}
+			#if = {
+			#	limit = {
+			#		has_completed_focus = USA_neutrality_act
+			#		}
+			#	threat > 0.19
+			#	}
 		}
 		
 		bypass = {
@@ -3195,6 +3217,8 @@ focus_tree = {
 			add_ideas = us_vol
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_command_power = 50
 			
 			USA_congress_medium_opposition = yes
 
@@ -3289,6 +3313,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			add_political_power = 50
+			add_command_power = 50
 			USA_congress_medium_support = yes
 		}
 	}
@@ -3494,6 +3519,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
+			add_command_power = 100
 			add_ideas = limited_conscription
 			
 			USA_congress_small_opposition = yes
@@ -3745,6 +3771,8 @@ focus_tree = {
 		completion_reward = {
 			add_country_leader_trait = usa_crisis
 			
+			add_command_power = 50
+			
 			remove_ideas = {
 				isolationism
 				us_vol
@@ -3832,6 +3860,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_country_leader_trait = cic
+			
+			add_command_power = 100
 		}
 	}
 	focus = {
@@ -4477,7 +4507,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_war_plans_division }
 		relative_position_id = USA_war_plans_division
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
