@@ -54,7 +54,7 @@ ideas = {
 			#special_forces_attack_factor = 0.1
 			#special_forces_defence_factor = 0.1
 			# attrition = 0.1
-			special_forces_training_time_factor = -0.05
+			special_forces_training_time_factor = 0.05
 			special_forces_cap = 0.5
 				}
 			}
@@ -65,11 +65,11 @@ ideas = {
 			cancel = { }
 			modifier = {
 			conscription_factor = -0.4
-			special_forces_training_time_factor = 0.2
+			special_forces_training_time_factor = 0.1
 			special_forces_attack_factor = 0.2
 			special_forces_defence_factor = 0.2
-			special_forces_no_supply_grace = 120
-			special_forces_out_of_supply_factor = -0.2
+			special_forces_no_supply_grace = 168
+			special_forces_out_of_supply_factor = -0.3
 				}
 			}
 
@@ -115,7 +115,7 @@ ideas = {
 			max_dig_in_factor = -0.3
 			army_morale_factor = 0.2
 			pocket_penalty = -0.5
-			org_loss_at_low_org_factor = -0.1
+			org_loss_at_low_org_factor = -0.2
 			land_reinforce_rate = 0.02
 				}
 			}
@@ -142,7 +142,7 @@ ideas = {
 			shore_bombardment_bonus = 0.1
 			river_crossing_factor = -0.2
 			naval_invasion_penalty = -0.1
-			supply_consumption_factor = 0.1
+			supply_consumption_factor = 0.05
 				}
 			}
 			
