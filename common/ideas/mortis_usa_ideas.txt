@@ -9,6 +9,7 @@ ideas = {
 			send_volunteers_tension = -1
 			air_volunteer_cap = 1
 			army_armor_attack_factor = -0.2
+			weekly_casualties_war_support = 0.002
 			}
 		}
 
@@ -136,7 +137,7 @@ ideas = {
 		
 	american_generosity = {
 		picture = ARG_american_allyship
-		allowed = { }	
+		allowed = { }
 		modifier = {
 			#stability_factor = 0.1
 			#war_support_factor = 0.1
@@ -185,6 +186,7 @@ ideas = {
 			refit_speed = 0.6
 			consumer_goods_factor = 0.5
 			political_power_cost = 0.5
+			weekly_convoys_war_support = 0.005
 			}
 		}
 

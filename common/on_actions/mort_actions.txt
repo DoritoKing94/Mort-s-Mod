@@ -18,6 +18,7 @@ on_actions = {
 						tag = HOL
 						tag = BEL
 						tag = COG
+						tag = MON
 					}
 				}
 				add_ideas = { peacetime }
@@ -343,6 +344,29 @@ on_actions = {
 						token = team_airforce
 					}
 				}
+				if = {
+					limit = {
+						NOT = {
+							tag = MON
+						}
+					}
+					add_operation_token = {
+						tag = MON
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = MON
+						token = team_army
+					}
+					add_operation_token = {
+						tag = MON
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = MON
+						token = team_airforce
+					}
+				}
 			} # allied intel sharing
 			
 			every_country = {
@@ -624,27 +648,6 @@ on_actions = {
 			
 			ENG = { give_guarantee = POL }
 			FRA = { give_guarantee = POL }
-
-			448 = {
-				add_core_of = NEE
-				start_resistance = yes
-				add_compliance = 70
-				}
-			550 = {
-				add_core_of = NEE
-				start_resistance = yes
-				add_compliance = 70
-				}
-			559 = {
-				add_core_of = NEE
-				start_resistance = yes
-				add_compliance = 70
-				}	
-			647 = {
-				add_core_of = NEE
-				start_resistance = yes
-				add_compliance = 30
-				}
 
 		} # effect	
 	} # startup

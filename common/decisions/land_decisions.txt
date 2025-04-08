@@ -651,5 +651,33 @@ AI_annex = {
 		} #effects		
     } #
 	
-	
+	annex_tan = {
+        icon = GFX_decision_eng_trade_unions_support
+		priority = 9
+		allowed = { tag = MON }
+        available = {
+			date > 1937.01.01
+			TAN = { is_ai = yes }
+			}
+        visible = { country_exists = TAN }
+        complete_effect = {
+			TAN = {
+				every_unit_leader = {
+				set_nationality = MON
+					}
+				}
+			TAN = {
+				every_unit_leader = {
+				set_nationality = ROOT
+					}
+				}
+			annex_country = { target = TAN transfer_troops = yes }
+			every_state = {
+				limit = {
+					is_core_of = TAN
+					}
+				add_core_of = ROOT
+			}
+		} #effects		
+    } #
 } #general dec
