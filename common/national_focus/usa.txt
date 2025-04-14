@@ -2427,11 +2427,11 @@ focus_tree = {
 					} #Left
 				AND = {
 					has_completed_focus = USA_reestablish_the_gold_standard
-					date > 1940.1.1
+					OR = {
+						date > 1940.1.1
+						FRA = { has_capitulated = yes }
+						}
 					} #Right
-				#OR = {
-				#	ENG = { has_war_with = GER }
-				#	}
 				}
 			democratic > 0.95
 		}

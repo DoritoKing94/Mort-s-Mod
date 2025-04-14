@@ -15,10 +15,9 @@ important_actions = {
 		SOV = {
 			army_experience = 100
 			air_experience = 100
-			add_offsite_building = { type = industrial_complex level = 6 }
+			add_offsite_building = { type = industrial_complex level = 5 }
 			}
 		FRA = {
-			add_war_support = 0.05
 			add_stability = 0.15 
 			}
 		} # effect
@@ -34,7 +33,7 @@ important_actions = {
 		}
     available = {
 		has_war = no
-		date < 1943.01.01
+		date < 1942.01.01
 		has_idea = SPA_la_division_azul
 		}
 	complete_effect = {
@@ -63,7 +62,6 @@ important_actions = {
 			}
 		GER = { add_to_faction = ROOT }
 		add_ideas = spain_war
-		add_state_core = 118
 
 			POR = {
 				every_unit_leader = {
@@ -267,7 +265,6 @@ important_actions = {
 				}
 			}
 	complete_effect = {
-		add_offsite_building = { type = arms_factory level = 10 }
 		add_offsite_building = { type = industrial_complex level = 10 }
 		add_offsite_building = { type = dockyard level = 10 }
 		every_country = {
@@ -322,7 +319,7 @@ important_actions = {
 			} # or
 		}
 	complete_effect = {
-		add_war_support = -0.15
+		add_war_support = -0.2
 		add_timed_idea = {
     			idea = ships
    			days = 180
@@ -483,19 +480,19 @@ important_actions = {
 	} #
 	
 	fra_special = {
-	cost = 50
+	cost = 100
 	ai_will_do = { base = 0 }
 	icon = generic_army_support
 	fire_only_once = yes
 	allowed = { tag = FRA }
 	visible = { NOT = { has_completed_focus = FRA_special_forces } }
 	available = { has_capitulated = yes }
-	days_remove = 70
+	days_remove = 100
 	remove_effect = { complete_national_focus = FRA_special_forces }
 	} #
 	
 	fin_con = {
-	cost = 150
+	cost = 125
 	icon = eng_blackshirt_march
 	ai_will_do = { base = 1 }
 	fire_only_once = yes
@@ -510,7 +507,7 @@ important_actions = {
 	cost = 100
 	icon = CHL_grant_full_rights_to_the_mapuche
 	ai_will_do = { base = 0 }
-	fire_only_once = yes
+	fire_only_once = no
 	allowed = {
 		OR = {
 			tag = MAN
@@ -539,6 +536,7 @@ important_actions = {
 	complete_effect = {
 		remove_ideas = bog_nobody_likes_invading_norway
 		GER = { add_to_faction = ROOT }
+		unlock_national_focus = NOR_the_administrative_council
 		}
 	} #norway
 
