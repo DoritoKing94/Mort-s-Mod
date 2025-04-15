@@ -40,5 +40,16 @@ ideas = {
 			}
 		}
 		
+		ai_limit2 = {
+			allowed = { }
+			cancel = { is_ai = no }
+			picture = CHL_ligas_patrioticas
+			modifier = {
+				industrial_capacity_factory = -2
+				production_speed_buildings_factor = -2
+				compliance_gain = 1
+			}
+		}
+		
 	} # country
 }

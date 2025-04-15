@@ -168,7 +168,10 @@ army_decisions = {
 			}
 		} # complete
 	days_remove = 120
-	remove_effect = { add_ideas = best }
+	remove_effect = {
+		add_ideas = best
+		add_potential_special_forces_tree = yes
+		}
 	} # best
 
 	relentless_offensive = {

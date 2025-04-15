@@ -2505,10 +2505,6 @@ focus_tree = {
 			OR = {
 				has_war = yes
 				has_war_support > 0.3
-				AND = {
-					has_completed_focus = USA_reestablish_the_gold_standard
-					has_war_support > 0.15
-					} #Right
 			}
 		}
 
@@ -2793,10 +2789,6 @@ focus_tree = {
 			OR = {
 				has_war_support > 0.3
 				has_war = yes
-				AND = {
-					has_completed_focus = USA_reestablish_the_gold_standard
-					has_war_support > 0.15
-					} #Right
 			}
 		}
 
@@ -3218,8 +3210,6 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			add_command_power = 50
-			
 			USA_congress_medium_opposition = yes
 
 			CHI = { complete_national_focus = CHI_invite_the_flying_tigers }
@@ -3313,7 +3303,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			add_political_power = 50
-			add_command_power = 50
 			USA_congress_medium_support = yes
 		}
 	}
@@ -3771,8 +3760,6 @@ focus_tree = {
 		completion_reward = {
 			add_country_leader_trait = usa_crisis
 			
-			add_command_power = 50
-			
 			remove_ideas = {
 				isolationism
 				us_vol
@@ -3936,6 +3923,8 @@ focus_tree = {
 				specialization = specialization_naval
 				value = 3
 			}
+			unlock_military_industrial_organization_tooltip = mio:mort_organization
+			set_country_flag = mort_mio
 		}
 	}
 	focus = {

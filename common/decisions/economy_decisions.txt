@@ -14,11 +14,20 @@ economic_decisions = {
 		}
 	}
 	available = {
-		NOT = { controls_state = 16 }
-			any_owned_state = {
-                is_fully_controlled_by = ROOT
-                arms_factory > 4
-            	}
+		if = {
+			limit = {
+				OR = {
+					TAG = FRA
+					TAG = BEL
+					tag = HOL
+					}
+				}
+			has_capitulated = yes
+			}
+		any_owned_state = {
+			is_fully_controlled_by = ROOT
+			arms_factory > 4
+            }
      	} # Available End
      	complete_effect = {
 		add_research_slot = 1
@@ -36,7 +45,7 @@ economic_decisions = {
 		civilian_factory_use = 4
 		consumer_goods_factor = 0.4
 		}
-        days_remove = 100
+        days_remove = 90
     	remove_effect = { }    	
     	ai_will_do = { base = 0 }
 	} # Tech

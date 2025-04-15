@@ -14,7 +14,18 @@ important_actions = {
 		}
 	}
 	visible = { NOT = { has_country_flag = picked } }
-	available = { NOT = { controls_state = 16 } }
+	available = {
+		if = {
+			limit = {
+				OR = {
+					TAG = FRA
+					TAG = BEL
+					tag = HOL
+					}
+				}
+			has_capitulated = yes
+			}
+		}
     complete_effect = {
 		add_ideas = political_focus
 		set_country_flag = picked
@@ -36,7 +47,18 @@ important_actions = {
 			}
 		}
 	visible = { NOT = { has_country_flag = picked } }
-	available = { NOT = { controls_state = 16 } }
+	available = {
+		if = {
+			limit = {
+				OR = {
+					TAG = FRA
+					TAG = BEL
+					tag = HOL
+					}
+				}
+			has_capitulated = yes
+			}
+		}
 	complete_effect = {
 		add_ideas = construction_focus
 		set_country_flag = picked
@@ -82,7 +104,18 @@ important_actions = {
 			}
 		}
 	visible = { NOT = { has_country_flag = picked } }
-	available = { NOT = { controls_state = 16 } }
+	available = {
+		if = {
+			limit = {
+				OR = {
+					TAG = FRA
+					TAG = BEL
+					tag = HOL
+					}
+				}
+			has_capitulated = yes
+			}
+		}
 	complete_effect = { 
 		add_ideas = production_focus
 		set_country_flag = picked

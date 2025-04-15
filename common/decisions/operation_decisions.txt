@@ -160,7 +160,7 @@ military_operations = {
 	ai_will_do = { base = 1 }
 	allowed = { tag = SOV }
         available = {
-			surrender_progress > 0.55
+			surrender_progress > 0.5
 			casualties_k > 1000
 				}
 	complete_effect = {
@@ -345,32 +345,32 @@ military_operations = {
 	navy_defense = {
 	icon = generic_naval
 	fire_only_once = no
-	days_re_enable = 365
+	days_re_enable = 140
 	cost = 50
 	allowed = { tag = ENG }
     available = {
 		has_war = yes
-		NOT = {
-		has_idea = navy_offense
-			}
+		#NOT = {
+		#has_idea = navy_offense
+		#	}
 		}
 	complete_effect = {
-		add_war_support = -0.15
+		add_war_support = -0.1
 		every_country = {
 		limit = { is_in_faction_with = ENG }
 			add_timed_idea = {
     			idea = navy_defense
-				days = 365
+				days = 140
 					}
 				}
 			} # effects
 	} # navy def
 
-	navy_offense = {
+	navy_offense = { #un
 	icon = generic_naval
 	fire_only_once = no
     days_re_enable = 365
-	allowed = { tag = ENG }
+	allowed = { tag = SWI }
 	cost = 50
         available = { 
 		has_war = yes
@@ -450,7 +450,7 @@ military_operations = {
 		province = 11954
 		value = 8 }
 			}
-	modifier = { civilian_factory_use = 10 }
+	modifier = { civilian_factory_use = 8 }
     days_remove = 60
 	remove_effect = {
 		450 = { add_dynamic_modifier = { modifier = supply } } # Benghasi
@@ -472,7 +472,7 @@ military_operations = {
 		province = 5010
 		value = 20 } # Addis Ababa
 			}
-	modifier = { civilian_factory_use = 6 }
+	modifier = { civilian_factory_use = 4 }
     days_remove = 60
 	remove_effect = {
 		every_state = {
@@ -504,7 +504,7 @@ military_operations = {
 		province = 7236
 		value = 5 }
 			}
-	modifier = { civilian_factory_use = 6 }
+	modifier = { civilian_factory_use = 5 }
     days_remove = 60
 	remove_effect = {
 		every_state = {
@@ -618,7 +618,6 @@ military_operations = {
 	cost = 70
 	allowed = { tag = SOV }
 	available = {
-		CHI = has_war_with = JAP
 		CHI = { surrender_progress > 0 }
 		}
 	remove_effect = {

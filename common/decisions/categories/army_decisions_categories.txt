@@ -1,7 +1,5 @@
 army_decisions = {
-     icon = military_operation
-		priority = 8
-     allowed = {
-		has_dlc = "Waking the Tiger"
-		}
+    icon = military_operation
+	priority = 8
+	picture = GFX_decision_cat_picture_SWI_military_readiness_decisions
 }

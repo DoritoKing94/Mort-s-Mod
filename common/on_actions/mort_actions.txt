@@ -625,12 +625,16 @@ on_actions = {
 						tag = VEN
 						tag = TUR
 						tag = SWI
+						tag = OMA
+						tag = KUW
 						# tag = POR
 						}
 				}
 				add_ideas = { ai_limit }
 				delete_unit = { }
 			} # ai
+			
+			IRE = { add_ideas = { ai_limit2 } }
 
 			BUL = {
 				activate_decision = 50w

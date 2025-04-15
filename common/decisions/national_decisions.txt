@@ -344,6 +344,7 @@ important_actions = {
 		}
     available = { }
 	complete_effect = {
+		unlock_military_industrial_organization_tooltip = mio:mort_organization
 		mio:mort_organization = { add_mio_size = 2 }
 		set_country_flag = mort_mio
 			}
@@ -492,7 +493,7 @@ important_actions = {
 	} #
 	
 	fin_con = {
-	cost = 125
+	cost = 150
 	icon = eng_blackshirt_march
 	ai_will_do = { base = 1 }
 	fire_only_once = yes

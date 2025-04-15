@@ -96,7 +96,7 @@ ideas = {
 			modifier = {
 			army_attack_factor = -0.05
 			army_defence_factor = -0.05
-			max_dig_in_factor = 0.2
+			max_dig_in_factor = 0.4
 			max_planning = 0.2
 			planning_speed = -0.3
 			dig_in_speed_factor = -0.3
@@ -158,7 +158,7 @@ ideas = {
 				}
 			}
 
-		enigma = {
+		enigma = { #un
 			picture = FIN_maan_turva
 			allowed = { }
 			cancel = { }

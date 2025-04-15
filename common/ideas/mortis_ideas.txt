@@ -62,7 +62,7 @@ ideas = {
 		picture = SPA_crusade_against_democracy
 		allowed = { }
 		modifier = {
-			send_volunteer_size = 64
+			send_volunteer_size = 100
 			acclimatization_cold_climate_gain_factor = 0.1
 			send_volunteers_tension = -1
 			send_volunteer_divisions_required = -1
@@ -87,13 +87,13 @@ ideas = {
 		allowed = { }
 		modifier = {
 			production_lack_of_resource_penalty_factor = -0.15
-			convoy_retreat_speed = 0.4
-			naval_retreat_speed = 0.2
-			navy_submarine_detection_factor = 0.15
+			convoy_retreat_speed = 0.15
+			war_support_weekly = -0.003
+			weekly_convoys_war_support = 0.006
 			}
 		}
 
-	navy_offense = {
+	navy_offense = { #un
 		picture = SWE_coastal_support
 		allowed = { }
 		modifier = {

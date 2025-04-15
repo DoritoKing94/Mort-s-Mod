@@ -3,13 +3,18 @@ mort_organization = {
 	icon = GFX_idea_renault
 	allowed = {
 		NOT = {
-		tag = USA
 		tag = SOV
 		tag = GER
 		tag = JAP
 		tag = ENG
 		tag = ITA
 		tag = FRA
+			}
+		}
+	visible = {
+		IF = {
+			limit = { FROM = { original_tag = USA } }
+			FROM = { has_completed_focus = USA_reestablish_the_gold_standard }
 			}
 		}
 	available = { FROM = { has_country_flag = mort_mio } }
