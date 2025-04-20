@@ -116,16 +116,19 @@ important_actions = {
 			has_capitulated = yes
 			}
 		}
-	complete_effect = { 
+	complete_effect = {
 		add_ideas = production_focus
 		set_country_flag = picked
 		}
-    ai_will_do = { base = 0 }
+	ai_will_do = {
+		base = 0
+		}
 	} # Production
 
 	peacetime = {
 	icon = generic_army_support
 	fire_only_once = no
+	ai_will_do = { base = 0 }
 	allowed = { }
 	visible = {
 		has_war = no

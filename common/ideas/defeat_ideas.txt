@@ -11,7 +11,7 @@ ideas = {
 	endsieg = {
 		picture = generic_fascism_rising
 		allowed = { }
-		cancel = { GER = { surrender_progress < 0.1 } }
+		cancel = { GER = { surrender_progress < 0.01 } }
 		modifier = {
 		minimum_training_level = -1
 		conscription_factor = 0.15

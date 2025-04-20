@@ -418,8 +418,8 @@ important_actions = {
 			state = 361
 						}
 					} #effects       
-    modifier = { 
-		consumer_goods_factor = 0.4
+    modifier = {
+		consumer_goods_factor = 0.25
 		civilian_factory_use = 15
 			}
     days_remove = 90
@@ -460,7 +460,7 @@ important_actions = {
 		amount = 1
 					}
 			} # effect
-    modifier = { 
+    modifier = {
 		consumer_goods_factor = 0.5
 		civilian_factory_use = 15
 		}

@@ -112,7 +112,7 @@ ideas = {
 		allowed = { }
 		cancel = { any_allied_country = { controls_state = 336 } }
 		modifier = {
-			consumer_goods_factor = 0.5
+			consumer_goods_factor = 0.75
 			}
 		}
 

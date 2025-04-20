@@ -582,12 +582,22 @@ AI_annex = {
 				tag = BRA
 				tag = MEX
 				tag = FRA
+				tag = BEL
 				}
 			}
         available = {
 			date > 1938.01.01
 			INS = { has_capitulated = no }
 			HOL = { is_ai = yes }
+			if = {
+				limit = {
+					OR = {
+						TAG = FRA
+						TAG = BEL
+						}
+					}
+			has_capitulated = yes
+				}
 			}
         visible = {
 			country_exists = INS
@@ -624,6 +634,15 @@ AI_annex = {
         available = {
 			date > 1938.01.01
 			HOL = { is_ai = yes }
+			if = {
+				limit = {
+					OR = {
+						TAG = FRA
+						TAG = BEL
+						}
+					}
+			has_capitulated = yes
+				}
 			}
         visible = {
 			OR = {
