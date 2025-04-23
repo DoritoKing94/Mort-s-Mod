@@ -368,15 +368,15 @@ technologies = {
 		}
 		##
 		category_tank_destroyers = {
-			max_organisation = 3
+			max_organisation = 4
 			breakthrough = 0.08
 		}
 		category_self_propelled_artillery = {
-			max_organisation = 3
+			max_organisation = 4
 			breakthrough = 0.08
 		}
 		category_self_propelled_anti_air = {
-			max_organisation = 3
+			max_organisation = 4
 			breakthrough = 0.08
 		}
 		##Mort
@@ -684,15 +684,15 @@ technologies = {
 		
 		##Mort
 		category_tank_destroyers = {
-			max_organisation = 3
+			max_organisation = 4
 			breakthrough = 0.08
 		}
 		category_self_propelled_artillery = {
-			max_organisation = 3
+			max_organisation = 4
 			breakthrough = 0.08
 		}
 		category_self_propelled_anti_air = {
-			max_organisation = 3
+			max_organisation = 4
 			breakthrough = 0.08
 		}
 		##
@@ -1193,7 +1193,7 @@ technologies = {
 		
 		category_line_artillery = {
 			default_morale = 0.2
-			max_organisation = 10 #Mort
+			max_organisation = 5 #Mort
 		}
 		
 		category_cavalry = {
@@ -1323,8 +1323,8 @@ technologies = {
 		}
 		
 		category_army = {
-			max_organisation = 10
-			default_morale = 0.1
+			max_organisation = 5
+			default_morale = 0.05
 		} #Mort
 		
 		enable_tactic = tactic_blitz
@@ -2944,12 +2944,8 @@ technologies = {
 		#experience_gain_army_unit_factor = 0.05
 		experience_loss_factor = 0.10
 		category_army = {
-			max_organisation = 10
-			default_morale = 0.1
-		}
-		category_all_armor = {
-			max_organisation = 10
-			default_morale = 0.1
+			max_organisation = 15
+			default_morale = 0.15
 		}
 		artillery_brigade = { combat_width = -1 }
 		rocket_artillery_brigade = { combat_width = -1 }
