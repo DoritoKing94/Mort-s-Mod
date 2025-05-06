@@ -1,0 +1,188 @@
+important_actions = {
+
+	fra_cap = {
+		activation = { has_war_with = FRA }
+		allowed = { tag = GER }
+		fire_only_once = yes
+		available = { FRA = { has_capitulated = yes } }
+		priority = 10
+		icon = GFX_decision_generic_GER_flag
+		is_good = no
+		days_mission_timeout = 365
+		complete_effect = {
+			GER = {
+			add_tech_bonus = {
+				bonus = 0.1
+				uses = 2
+				category = artillery
+				name = "Victory in France"
+						}
+					}
+			hidden_effect = {
+				BEL = { complete_national_focus = BEL_interpreters }
+				}
+			}
+		timeout_effect = {
+			FRA = {
+				add_ideas = collapse
+				add_political_power = 200
+				add_stability = 0.2
+				add_war_support = 0.2
+				}
+				772 = {
+					add_resource = { type = steel amount = 30 }
+					add_building_construction = {
+					type = industrial_complex
+					level = var:GER.fra_reward
+					instant_build = yes }
+					add_extra_state_shared_building_slots = var:GER.fra_reward
+					} # congo
+				GER = {
+					add_tech_bonus = {
+						bonus = 0.4
+						uses = 2
+						category = artillery
+						name = "Lessons of France"
+						}
+					add_doctrine_cost_reduction = {
+						name = "Lessons of France"
+						cost_reduction = 0.9
+						uses = 10
+						category = land_doctrine
+						}
+					add_doctrine_cost_reduction = {
+						name = "Lessons of France"
+						cost_reduction = 0.9
+						uses = 4
+						category = air_doctrine
+						}
+					} #Ger
+				hidden_effect = {
+					BEL = { complete_national_focus = BEL_interpreters }
+					}
+			} #effect
+		} # fra cap	
+
+	fra_hold = { #f
+		activation = { GER = { has_war_with = FRA } }
+		allowed = { NOT = { tag = GER } }
+		fire_only_once = yes
+		available = { FRA = { has_capitulated = yes } }
+		priority = 10
+		icon = GFX_decision_SWI_guisan_speech
+		is_good = yes
+		days_mission_timeout = 365
+		complete_effect = {
+			effect_tooltip = {
+				GER = {
+				add_tech_bonus = {
+					bonus = 0.1
+					uses = 2
+					category = artillery
+					name = "Victory in France"
+							}
+						}
+					} #tooltip
+				}
+		timeout_effect = {
+			effect_tooltip = {
+				FRA = {
+					add_ideas = collapse
+					add_political_power = 200
+					add_stability = 0.2
+					add_war_support = 0.2
+					}
+				772 = {
+					add_resource = { type = steel amount = 30 }
+					add_building_construction = {
+					type = industrial_complex
+					level = var:GER.fra_reward
+					instant_build = yes }
+					add_extra_state_shared_building_slots = var:GER.fra_reward
+					} # congo
+				GER = {
+				add_tech_bonus = {
+					bonus = 0.4
+					uses = 2
+					category = artillery
+					name = "Lessons of France"
+						}
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.9
+					uses = 10
+					category = land_doctrine
+					name = "Lessons of France"
+						}
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.9
+					uses = 4
+					category = air_doctrine
+					name = "Lessons of France"
+						}
+					} # ger
+				} # fake/tooltip
+			}
+	} # global mission
+		
+
+    fra_com = {
+    icon = GFX_decision_SOV_the_stalin_constitution
+	allowed = { tag = GER }
+	available = {
+		has_war_with = FRA
+		has_active_mission = fra_cap
+		}
+	visible = { has_active_mission = fra_cap }
+	fire_only_once = no
+	priority = 5
+	ai_will_do = { base = 0 }
+    complete_effect = {
+		add_to_variable = {
+			var = fra_reward
+			value = 3
+			tooltip = fra_reward
+			}
+		FRA = { activate_mission = fra_com2 }
+		}
+	days_remove = 30
+	days_re_enable = 1
+	remove_effect = {
+		add_days_mission_timeout = {
+			mission = fra_cap
+			days = -35
+			}
+		hidden_effect = {
+			every_country = {
+				limit = { NOT = { tag = GER } }
+				add_days_mission_timeout = {
+					mission = fra_hold
+					days = -35
+					}
+				}
+			}
+		} #
+	}  # Ger reduce timer
+   
+	fra_com2 = {
+		activation = { always = no }
+		allowed = { tag = FRA }
+		fire_only_once = no
+		available = { FRA = { has_capitulated = yes } }
+		priority = 5
+		icon = generic_form_nation
+		is_good = no
+		days_mission_timeout = 30
+		complete_effect = { }
+		timeout_effect = {
+			effect_tooltip = {
+				FRA = {
+					add_days_mission_timeout = {
+						mission = fra_hold
+						days = -35
+						}
+					}
+				} # fake/tooltip
+			} #effect
+		} # fra timer mission
+
+} #important

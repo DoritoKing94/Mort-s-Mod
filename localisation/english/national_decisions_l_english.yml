@@ -78,11 +78,7 @@
  
  sia_supply:0 "Logistics in Siam"
  
- fra_cap:0 "Victory in France"
- 
- fra_hold:0 "Battle of France"
- 
- fra_worker:0 "Resolve the labor issue"
+ fra_worker:0 "Resolve the labor crisis"
  
  fra_special:0 "Diversify Special Forces"
  
@@ -91,3 +87,5 @@
  auto:0 "Promote autonomy"
  
  nor_align:0 "Align With Germany"
+ 
+ fin_align:0 "Align With Germany"

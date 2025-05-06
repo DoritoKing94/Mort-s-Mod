@@ -7,7 +7,7 @@ news_event = { #endsieg
 	id = mortis.1
 	title = mortis.1.t
 	desc = mortis.1.d
-	picture = GFX_news_event_german_reichstag_ruins_01
+	picture = GFX_news_event_german_reichstag_ruins_02
 	is_triggered_only = yes
 	major = yes	
 	

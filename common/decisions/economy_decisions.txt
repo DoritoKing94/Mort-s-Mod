@@ -1,7 +1,7 @@
 economic_decisions = {
 
 	increase_technology = {
-    icon = generic_research
+    icon = GFX_decision_SOV_academy_of_sciences
 	fire_only_once = yes
      	allowed = {
 		NOT = {
@@ -182,6 +182,7 @@ economic_decisions = {
             random_owned_controlled_state = {
             	LIMIT = {
             		is_core_of = ROOT
+					is_fully_controlled_by = ROOT
                 #OR = {
                 #      has_state_category = megalopolis
                 #      has_state_category = metropolis
@@ -223,26 +224,15 @@ economic_decisions = {
     	available = {
     		num_of_civilian_factories_available_for_projects > 4
             any_owned_state = {
-            is_core_of = ROOT
-            is_fully_controlled_by = ROOT    
-                #OR = {
-                #      has_state_category = megalopolis
-                #      has_state_category = metropolis
-                #      has_state_category = large_city
-                #      has_state_category = city                    
-                #}
+				is_core_of = ROOT
+				is_fully_controlled_by = ROOT
             }
     	}
     	complete_effect = {
             random_owned_controlled_state = {
                 LIMIT = {
                     is_core_of = ROOT
-                    #OR = {
-                    #  has_state_category = megalopolis
-                    #  has_state_category = metropolis
-                    #  has_state_category = large_city
-                    #  has_state_category = city 
-                    #}
+					is_fully_controlled_by = ROOT
                 }
                 add_resource = {type = aluminium amount = 4 }
             }               
@@ -280,6 +270,7 @@ economic_decisions = {
             random_owned_controlled_state = {
             	LIMIT = {
             		is_core_of = ROOT
+					is_fully_controlled_by = ROOT
             	}
             	add_resource = {type = chromium amount = 4 }
             }               
@@ -317,9 +308,10 @@ economic_decisions = {
             random_owned_controlled_state = {
             	LIMIT = {
             		is_core_of = ROOT
+					is_fully_controlled_by = ROOT
             	}
             	add_resource = { type = tungsten amount = 4 }
-            }               
+            }
         }
         modifier = { civilian_factory_use = 5 }
         days_remove = 70

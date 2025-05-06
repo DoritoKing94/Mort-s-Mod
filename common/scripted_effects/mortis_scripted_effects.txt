@@ -16,6 +16,7 @@ intel_sharing = {
 						tag = HOL
 						tag = BEL
 						tag = COG
+						tag = MON
 					}
 				}
 				if = {
@@ -337,6 +338,29 @@ intel_sharing = {
 					}
 					add_operation_token = {
 						tag = COG
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = MON
+						}
+					}
+					add_operation_token = {
+						tag = MON
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = MON
+						token = team_army
+					}
+					add_operation_token = {
+						tag = MON
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = MON
 						token = team_airforce
 					}
 				}

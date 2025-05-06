@@ -3405,6 +3405,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = american_industry
+			
 		}
 	}
 
@@ -3473,6 +3474,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = econ_growth
+			
+			unlock_military_industrial_organization_tooltip = mio:mort_organization
+			set_country_flag = mort_mio
 		}
 	}
 	focus = {
@@ -3504,12 +3508,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			add_command_power = 100
 			add_ideas = us_strength
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			add_command_power = 100
 			add_ideas = limited_conscription
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			unlock_military_industrial_organization_tooltip = mio:mort_organization
+			set_country_flag = mort_mio
 			
 			USA_congress_small_opposition = yes
 		}
@@ -3923,8 +3932,6 @@ focus_tree = {
 				specialization = specialization_naval
 				value = 3
 			}
-			unlock_military_industrial_organization_tooltip = mio:mort_organization
-			set_country_flag = mort_mio
 		}
 	}
 	focus = {
@@ -4155,8 +4162,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_stability = -0.10
-			add_war_support = -0.20
+			add_war_support = -0.3
 			add_timed_idea = {
     			idea = usa_backfoot
     			days = 200

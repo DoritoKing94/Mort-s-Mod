@@ -635,23 +635,22 @@ on_actions = {
 			} # ai
 			
 			IRE = { add_ideas = { ai_limit2 } }
-
-			BUL = {
-				activate_decision = 50w
-				delete_unit = {
-				state = 48
-				disband = yes
-						}
-					}
-			48 = {
-				create_unit = {
-				division = "name = \"Basic\" division_template = \"50w\" start_experience_factor = 0.25 start_equipment_factor = 0.1 start_manpower_factor = 1"
-				owner = BUL
-					}
-				}
 			
 			ENG = { give_guarantee = POL }
 			FRA = { give_guarantee = POL }
+			
+			BUL = { country_lock_all_division_template = no }
+
+			GER = {
+				set_variable = {
+				var = fra_reward
+				value = 8
+					}
+				}
+			SWI = {
+				unlock_national_focus = SWI_seek_trade_agreement_with_germany
+				unlock_national_focus = SWI_axis_gold
+				}
 
 		} # effect	
 	} # startup

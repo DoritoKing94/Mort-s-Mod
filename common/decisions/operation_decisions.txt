@@ -1,7 +1,7 @@
 military_operations = {
 
 	endsieg = {
-	icon = ger_reichskommissariats
+	icon = GFX_decision_GER_claim_yugo_1
 	fire_only_once = yes
 	ai_will_do = { base = 1 }
 	allowed = { tag = GER }
@@ -141,21 +141,53 @@ military_operations = {
 			days = 500
 					}
 				}
-		282 = { 
-		add_building_construction = {
-   		type = bunker
-		level = 8
-		province = {
+		282 = {
+			add_building_construction = {
+			type = bunker
+			level = 8
+			province = {
 			id = 1182
 			}
-		instant_build = yes
+			instant_build = yes
 				}
-		} # Tokyo
-			} # effect
+			} # Tokyo
+		hidden_effect = {
+			division_template = {
+				name = "The Glorious Death of One Hundred Million"
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 0 y = 3 }
+					militia = { x = 0 y = 4 }
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+					militia = { x = 1 y = 2 }
+					militia = { x = 1 y = 3 }
+					militia = { x = 1 y = 4 }
+							}
+				support = {
+					military_police = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					}
+				}
+			} # hidden
+		 	every_core_state = {
+				limit = { is_controlled_by = JAP }
+						create_unit = {
+							division = "division_template = \"The Glorious Death of One Hundred Million\" start_experience_factor = 0.1 start_equipment_factor = 1 force_equipment_variants = { infantry_equipment_1 = { owner = \"JAP\" } artillery_equipment_1 = { owner = \"JAP\" } } "
+							owner = JAP
+						}
+						create_unit = {
+							division = "division_template = \"The Glorious Death of One Hundred Million\" start_experience_factor = 0.1 start_equipment_factor = 1 force_equipment_variants = { infantry_equipment_1 = { owner = \"JAP\" } artillery_equipment_1 = { owner = \"JAP\" } } "
+							owner = JAP
+						}
+					} #spawn ins
+		} # effect
 	} # sunset
 
 	sov_reserves = {
-	icon = oppression
+	icon = GFX_decision_SOV_the_military_conspiracy
 	fire_only_once = yes
 	ai_will_do = { base = 1 }
 	allowed = { tag = SOV }
@@ -251,7 +283,7 @@ military_operations = {
 	} # sov reserve
 
 	tukha = {
-	icon = generic_ignite_civil_war
+	icon = GFX_decision_USSR_claim_state_1
 	fire_only_once = yes
 	ai_will_do = { base = 1 }
 	allowed = { tag = SOV }
@@ -280,8 +312,11 @@ military_operations = {
 			}
 	} # tukha
 
+
+
+
 	sov_winter = {
-	icon = generic_operation
+	icon = GFX_decision_SOV_stalinist_state
 	fire_only_once = yes
 	ai_will_do = { base = 0 }
 	allowed = { tag = SOV }
@@ -289,6 +324,7 @@ military_operations = {
     available = {
 		FIN = { is_ai = no }
 		has_completed_focus = SOV_claims_in_baltic
+		has_war = no
 		}
 	days_remove = 70
 	complete_effect = {
@@ -307,7 +343,7 @@ military_operations = {
 	} # winter war
 
 	sov_evac = {
-	icon = generic_operation
+	icon = GFX_decision_generic_construction
 	fire_only_once = yes
 	ai_will_do = { base = 1 }
 	allowed = { tag = SOV }
@@ -446,7 +482,7 @@ military_operations = {
 	icon = GFX_decision_infiltrate_state
 	fire_only_once = yes
 	allowed = { tag = ITA }
-    available = { NOT = { has_war = yes } }
+    available = { has_war = no }
 	complete_effect = {
 		set_victory_points = {
 		province = 1130
@@ -474,7 +510,7 @@ military_operations = {
 	icon = GFX_decision_infiltrate_state
 	fire_only_once = yes
 	allowed = { tag = ITA }
-    	available = { NOT = { has_war = yes } }
+    	available = { has_war = no }
 	complete_effect = {
 		set_victory_points = {
 		province = 5010
@@ -500,7 +536,7 @@ military_operations = {
 	icon = GFX_decision_infiltrate_state
 	fire_only_once = yes
 	allowed = { tag = JAP }
-    available = { NOT = { has_war = yes } }
+    available = { has_war = no }
 	complete_effect = {
 		set_victory_points = {
 		province = 7408
@@ -619,7 +655,7 @@ military_operations = {
 	} # force barb
 	
 	sov_chi = {
-	icon = jap_pacific_guardian
+	icon = GFX_decision_jap_conquer_china
 	fire_only_once = yes
 	ai_will_do = { base = 0 }
 	days_remove = 70
