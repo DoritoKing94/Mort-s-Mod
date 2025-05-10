@@ -206,14 +206,16 @@ important_actions = {
 	allowed = { tag = FRA }
 	visible = { country_exists = VIC }
 	available = {
-		VIC = { has_capitulated = yes }
-		is_in_faction_with = VIC
+		country_exists = VIC
+		VIC = {
+			is_in_faction_with = ROOT
+			}
 		}
 	complete_effect = {
-		random_other_country = { 
+		random_other_country = {
 			limit = { tag = VIC }
 			country_event = lar_france_vichy_reunification.1
-					}
+				}
 			} # effect
 	} # vichy
 

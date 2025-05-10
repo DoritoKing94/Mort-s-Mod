@@ -649,8 +649,7 @@ on_actions = {
 				}
 			SWI = {
 				unlock_national_focus = SWI_seek_trade_agreement_with_germany
-				unlock_national_focus = SWI_axis_gold
-				}
+				} ##unlock_national_focus = SWI_axis_gold
 
 		} # effect	
 	} # startup

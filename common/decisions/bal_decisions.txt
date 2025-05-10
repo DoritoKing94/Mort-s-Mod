@@ -191,21 +191,30 @@ important_actions = {
             ENG = {
                 add_to_faction = ROOT
             }
-			ROOT = { add_ideas = bel_interpreters_ns }
         }
 
         ai_will_do = { factor = 0 }
     }
 	
-	bel_fix = {
+	fix_bel = {
 	icon = generic_decision
 	fire_only_once = yes
 	ai_will_do = { factor = 1 }
 	allowed = { tag = SWI }
     available = { BEL = { is_in_faction_with = USA } }
 	complete_effect = {
-		every_allied_country = { add_ideas = bel_interpreters_ns }
-		} # effect
+		BEL = {
+			uncomplete_national_focus = {
+			focus = BEL_interpreters
+			uncomplete_children = no
+			refund_political_power = no
+				}
+			}
+		}
+	days_remove = 3
+	remove_effect = {
+		BEL = { complete_national_focus = BEL_interpreters } 
+		}
 	} # 
 	
 	ger_fix = {
