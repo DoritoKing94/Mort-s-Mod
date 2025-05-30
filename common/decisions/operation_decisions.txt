@@ -322,7 +322,7 @@ military_operations = {
 	allowed = { tag = SOV }
 	war_with_on_remove = FIN
     available = {
-		FIN = { is_ai = no }
+		#FIN = { is_ai = no }
 		has_completed_focus = SOV_claims_in_baltic
 		has_war = no
 		}

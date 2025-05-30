@@ -3,26 +3,3 @@ general_decisions = {
 	priority = 100
 	allowed = { always = yes }
 }
-
-
-####Bogs backup
-
-important_actions = {
-	icon = generic_crisis
-	priority = 50
-
-	allowed = {
-		always = yes
-	}
-}
-
-military_operations = {
-	icon = usa_intervention_mandate
-	priority = 48
-}
-
-AI_annex = {
-	icon = GFX_decision_category_generic_political_actions
-
-    priority = -85
-}

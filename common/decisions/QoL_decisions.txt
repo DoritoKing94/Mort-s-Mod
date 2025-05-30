@@ -1,6 +1,6 @@
 QoL_decisions = {
 
-	50w = {
+	Conv = {
 		icon = generic_military
 		fire_only_once = yes
 		complete_effect = {

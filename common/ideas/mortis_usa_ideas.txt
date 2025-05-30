@@ -76,7 +76,7 @@ ideas = {
 		picture = HABSBURG_economy
 		allowed = { }
 		modifier = {
-			global_building_slots_factor = 0.2
+			global_building_slots_factor = 0.25
 			production_speed_buildings_factor = 0.3
 			production_speed_arms_factory_factor = -0.3
 			local_resources_factor = 0.1
@@ -186,12 +186,15 @@ ideas = {
 			consumer_goods_factor = 0.5
 			political_power_cost = 0.5
 			weekly_convoys_war_support = 0.005
-			equipment_bonus = {
-				small_plane_naval_bomber_airframe = {
-					build_cost_ic = -0.2 instant = yes
-					}
+			} #
+		equipment_bonus = {
+			small_plane_naval_bomber_airframe = {
+				build_cost_ic = -0.25 instant = yes
 				}
-			}
+			medium_plane_airframe = {
+				build_cost_ic = -0.25 instant = yes
+				}
+			} #
 		}
 
 	} # country

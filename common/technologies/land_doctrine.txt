@@ -288,13 +288,15 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 
+		##
+		org_loss_when_moving = -0.10
+
 		category_vehicle_infantry = {
-			max_organisation = 15
-			##
-			soft_attack = 0.1
-			hard_attack = 0.1
-			#Mort
-		}
+			max_organisation = 20 #15
+			breakthrough = 0.1
+			default_morale = 0.1
+		} 
+		##Mortis
 		
 		armored_car = {
 			max_organisation = 3	
@@ -367,19 +369,20 @@ technologies = {
 			breakthrough = 0.20
 		}
 		##
+		army_attack_speed_factor = 0.15
 		category_tank_destroyers = {
-			max_organisation = 4
+			max_organisation = 6
 			breakthrough = 0.08
 		}
 		category_self_propelled_artillery = {
-			max_organisation = 4
+			max_organisation = 6
 			breakthrough = 0.08
 		}
 		category_self_propelled_anti_air = {
-			max_organisation = 4
+			max_organisation = 6
 			breakthrough = 0.08
 		}
-		##Mort
+		##Mortis
 		
 		enable_tactic = tactic_blitz
 		
@@ -682,18 +685,11 @@ technologies = {
 		xp_unlock_cost = 100
 		enable_tactic = tactic_backhand_blow
 		
-		##Mort
-		category_tank_destroyers = {
-			max_organisation = 4
+		##Mortis
+		category_all_armor = {
+			max_organisation = 6
 			breakthrough = 0.08
-		}
-		category_self_propelled_artillery = {
-			max_organisation = 4
-			breakthrough = 0.08
-		}
-		category_self_propelled_anti_air = {
-			max_organisation = 4
-			breakthrough = 0.08
+			default_morale = 0.05
 		}
 		##
 		
@@ -896,10 +892,13 @@ technologies = {
 		enable_tactic = tactic_guerrilla_tactics
 		enable_tactic = tactic_sf_ambush
 		
-		##Mort
+		##Mortis
 		army_core_attack_factor = 0.05
 		army_core_defence_factor = 0.05
-		land_reinforce_rate = 0.03
+		land_reinforce_rate = 0.01
+		category_light_infantry = {
+			default_morale = 0.1
+			}
 		##
 		
 		doctrine = yes	
@@ -1085,7 +1084,7 @@ technologies = {
 			soft_attack = 0.25
 			hard_attack = 0.20
 			air_attack = 0.20
-		} #Mort
+		} ##Mortis
 		
 		path = {
 			leads_to_tech = regimental_combat_teams 
@@ -1138,7 +1137,7 @@ technologies = {
 			soft_attack = 0.25
 			hard_attack = 0.20
 			air_attack = 0.20
-		} #Mort
+		} ##Mortis
 		
 		enable_tactic = tactic_overwhelming_fire
 		
@@ -1193,7 +1192,7 @@ technologies = {
 		
 		category_line_artillery = {
 			default_morale = 0.2
-			max_organisation = 5 #Mort
+			max_organisation = 5 #Mortis
 		}
 		
 		category_cavalry = {
@@ -1258,7 +1257,7 @@ technologies = {
 			hard_attack = 0.10
 			air_attack = 0.10
 		}
-		##Mort
+		##Mortis
 		artillery_brigade = { combat_width = -1 }
 		rocket_artillery_brigade = { combat_width = -1 }
 		medium_sp_artillery_brigade = { combat_width = -1 }
@@ -1323,9 +1322,9 @@ technologies = {
 		}
 		
 		category_army = {
-			max_organisation = 5
+			max_organisation = 10
 			default_morale = 0.05
-		} #Mort
+		} #Mortis
 		
 		enable_tactic = tactic_blitz
 		
@@ -1778,7 +1777,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		
-		##Mort
+		##Mortis
 		category_army = { #category_front_line
 			 soft_attack = 0.1
 		} #0.05
@@ -2664,9 +2663,11 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		
-		##Mort
-		land_reinforce_rate = 0.06 
-		army_speed_factor = 0.10
+		##Mortis
+		land_reinforce_rate = 0.06
+		army_attack_speed_factor = 0.15
+		supply_consumption_factor = -0.15
+		no_supply_grace = 168
 		
 		artillery_brigade = { combat_width = -0.5 }
 		rocket_artillery_brigade = { combat_width = -0.5 }
@@ -2939,21 +2940,14 @@ technologies = {
 			max_organisation = 2
 		}
 
-		##Mort
+		##Mortis
 		army_strength_factor = 0.2
-		#experience_gain_army_unit_factor = 0.05
-		experience_loss_factor = 0.10
+		experience_loss_factor = 0.05
+		army_speed_factor = 0.2
 		category_army = {
 			max_organisation = 15
 			default_morale = 0.15
 		}
-		artillery_brigade = { combat_width = -1 }
-		rocket_artillery_brigade = { combat_width = -1 }
-		medium_sp_artillery_brigade = { combat_width = -1 }
-		heavy_sp_artillery_brigade = { combat_width = -1 }
-		mot_artillery_brigade = { combat_width = -1 }
-		mot_rocket_artillery_brigade = { combat_width = -1 }
-		motorized_rocket_brigade = { combat_width = -1 }
 		##
 
 		xp_research_type = army
@@ -3009,6 +3003,13 @@ technologies = {
 		max_planning = 0.10
 		land_reinforce_rate = 0.05
 
+		##Mortis
+		supply_consumption_factor = -0.15
+		attrition = -0.2
+		out_of_supply_factor = -0.15
+		army_fuel_capacity_factor = 0.2
+		##
+
 		enable_tactic = tactic_elastic_defense
 		
 		path = {
@@ -3056,13 +3057,24 @@ technologies = {
 	vast_offensives = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		supply_consumption_factor = -0.10
 		
 		infantry = {
 			combat_width = -0.3
 		}
-
 		
+		##Mortis
+		supply_consumption_factor = -0.15 #0.10
+		supply_node_range = 0.15
+		
+		artillery_brigade = { combat_width = -1 }
+		rocket_artillery_brigade = { combat_width = -1 }
+		medium_sp_artillery_brigade = { combat_width = -1 }
+		heavy_sp_artillery_brigade = { combat_width = -1 }
+		mot_artillery_brigade = { combat_width = -1 }
+		mot_rocket_artillery_brigade = { combat_width = -1 }
+		motorized_rocket_brigade = { combat_width = -1 }
+		##
+
 		enable_tactic = tactic_overwhelming_fire
 		
 		path = {
@@ -3516,8 +3528,8 @@ technologies = {
 		
 		resistance_growth_on_our_occupied_states = 0.25
 		
-		##Mort
-		army_strength_factor = -0.05
+		##Mortis
+		army_strength_factor = -0.10
 		##
 		
 		enable_tactic = tactic_guerrilla_tactics

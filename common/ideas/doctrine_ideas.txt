@@ -40,7 +40,7 @@ ideas = {
 			cancel = { }
 			modifier = {
 			enemy_army_bonus_air_superiority_factor = -0.4
-			air_cas_present_factor = -0.4
+			air_cas_present_factor = -0.5
 				}
 			}
 
@@ -64,7 +64,7 @@ ideas = {
 			allowed = { }
 			cancel = { }
 			modifier = {
-			conscription_factor = -0.4
+			conscription_factor = -0.5
 			special_forces_training_time_factor = 0.1
 			special_forces_attack_factor = 0.2
 			special_forces_defence_factor = 0.2
@@ -96,7 +96,7 @@ ideas = {
 			modifier = {
 			army_attack_factor = -0.05
 			army_defence_factor = -0.05
-			max_dig_in_factor = 0.4
+			max_dig_in_factor = 0.3
 			max_planning = 0.2
 			planning_speed = -0.3
 			dig_in_speed_factor = -0.3

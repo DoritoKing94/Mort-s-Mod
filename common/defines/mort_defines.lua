@@ -10,11 +10,11 @@ NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST = 0
 NDefines.NIndustrialOrganisation.DESIGN_TEAM_CHANGE_XP_COST = 1
 
 --Lag
-NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 12 -- WAS 48 | Smaller save files
+NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 6 -- WAS 48 | Smaller save files
 
 --QoL
 NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 20 -- 10 to 20
-NDefines.NProduction.ANNEX_FIELD_EQUIPMENT_RATIO = 0.25	-- WAS 0.25 | Equipment transferred on annexation
+NDefines.NProduction.ANNEX_FIELD_EQUIPMENT_RATIO = 0.50	-- WAS 0.25 | Equipment transferred on annexation
 NDefines.NBuildings.MAX_SHARED_SLOTS = 99 -- WAS 25 |
 
 --Fast/cheap licenses

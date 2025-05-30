@@ -487,7 +487,13 @@ AI_annex = {
 			}
         available = {
             AND = {
-				FIN = { has_capitulated = no }
+				FIN = {
+					OR = {
+						NOT = { has_war_with = SOV }
+						date > 1941.01.01
+						}
+					has_capitulated = no 
+					}
 				date > 1939.01.01
 				}
 			}

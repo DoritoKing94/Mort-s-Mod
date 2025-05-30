@@ -625,8 +625,6 @@ on_actions = {
 						tag = VEN
 						tag = TUR
 						tag = SWI
-						tag = OMA
-						tag = KUW
 						# tag = POR
 						}
 				}
@@ -647,11 +645,8 @@ on_actions = {
 				value = 8
 					}
 				}
-			SWI = {
-				unlock_national_focus = SWI_seek_trade_agreement_with_germany
-				} ##unlock_national_focus = SWI_axis_gold
 
-		} # effect	
+		} # effect
 	} # startup
 	
 	on_send_volunteers = {

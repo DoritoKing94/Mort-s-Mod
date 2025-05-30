@@ -3653,7 +3653,7 @@ focus_tree = {
 			OR = {
 				date > 1943.1.1
 				surrender_progress > 0
-				ENG = { surrender_progress > 0.25 }
+				ENG = { surrender_progress > 0.10 }
 				SOV = { surrender_progress > 0.5 }
 			}
 		}

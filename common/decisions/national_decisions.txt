@@ -300,16 +300,14 @@ important_actions = {
 		tag = ITA
 			}
 		}
-	
+	visible = { has_war = yes }
     available = {
-		
 		if = {
 			limit = {
 				tag = USA
 					}
 					NOT = { has_completed_focus = USA_reestablish_the_gold_standard }
 				}
-		has_war = yes
 		OR = {
 			has_navy_size = { size < 61 }
 			AND = {
